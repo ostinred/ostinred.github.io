@@ -5,6 +5,7 @@
   <title>test</title>
   <style>
     .top {
+      position: relative;
       width: 100vw;
       height: 100vh;
       background-image: url(https://beta.nutralete.com/img/main-bg.jpg);
@@ -15,8 +16,17 @@
       font-size: 20px;
     }
 
-    .isIos .top{
-      color: white;=
+    .top span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: red;
+    }
+
+    .isIos .top span{
+      color: white;
+
     }
 
     @media screen and (device-aspect-ratio: 2/3) {
@@ -59,8 +69,9 @@ and (orientation : portrait) {
 </head>
 <body>
 <div class='top'>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.
+  <span>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.  </span>
 </div>
 
   <script
