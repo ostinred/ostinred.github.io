@@ -10,13 +10,21 @@
       background-image: url(https://beta.nutralete.com/img/main-bg.jpg);
       background-size: cover;
       background-repeat: no-repeat;
+
+      color: red;
+      font-size: 20px;
+    }
+
+    .isIos .top{
+      color: white;
     }
   </style>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 </head>
 <body>
 <div class='top'>
-  
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.
 </div>
 
   <script
@@ -27,7 +35,7 @@
     var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
     function detectSafari(){
       if (isSafari) {
-        
+        $('body').addClass('isIos')
       } else {
         
       }
