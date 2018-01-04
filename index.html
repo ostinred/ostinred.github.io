@@ -5,29 +5,23 @@
   <title>test</title>
   <style>
     .top {
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;		
       position: relative;
       width: 100vw;
       height: 100vh;
-      background-image: url(https://beta.nutralete.com/img/main-bg.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      color: red;
-      font-size: 20px;
+      font-size: 10vw;
     }
 
-    .top span {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: red;
+    .top span a{
+    	display: block;
+    	font-size: 32px;
+    	color: red;
+    	font-family: Arial, sans-serif;
     }
 
-    .isIos .top span{
-      color: white;
-
-    }
 
     @media screen and (device-aspect-ratio: 2/3) {
       .isIos .top{
@@ -54,9 +48,9 @@
     }
 
     @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait) {
 
         .isIos .top{
         height: 960px;
@@ -69,9 +63,8 @@ and (orientation : portrait) {
 </head>
 <body>
 <div class='top'>
-  <span>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.  </span>
+  ☺️
+  <span><a href="https://github.com/ostinred/">Github ostinred</a></span>
 </div>
 
   <script
