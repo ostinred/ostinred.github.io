@@ -85,7 +85,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
   var isChrome = /Chrome/i.test(navigator.userAgent);
   var mq = $(window).width() < 1023;
-  var $main = $('main');
+  var $main = $('.main');
 
 
   function detectBrowser(){
@@ -93,6 +93,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       $body.addClass('isIos');
     } else if ((isChrome) && (mq)) {
       $body.addClass('isChrome');
+    } else {
     }
   }
 
