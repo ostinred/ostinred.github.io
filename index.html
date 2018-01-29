@@ -27,7 +27,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
   <style>
-    .ost-full {
+    .main {
       height: 100vh;
       background: green;
     }   
@@ -35,7 +35,7 @@
   
 </head>
 <body>
-<div class='ost-full'>
+<div class='main'>
   ☺️
   <span><a href="https://github.com/ostinred/">Github ostinred</a></span>
 </div>
@@ -81,35 +81,32 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 <script>
+
   var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
   var isChrome = /Chrome/i.test(navigator.userAgent);
   var mq = $(window).width() < 1023;
-  var viewportHeight = $('.ost-full').outerHeight();
-  
-  
+  var $main = $('main');
+
+
   function detectBrowser(){
     if (isSafari) {
-      $('body').addClass('isIos')
-      alert('isIos');
-      console.log('isIos');
+      $body.addClass('isIos');
     } else if ((isChrome) && (mq)) {
-      $('body').addClass('isChrome')
-      alert('isChrome');
-      console.log('isChrome');
+      $body.addClass('isChrome');
     } else {
-    console.log('not mobile');
-    alert('not mobile');
-    }
-  }
-
-  function fullHeightBanner() {
-    if ($('body').hasClass('isChrome')) {
-      $('.ost-full').css({ height: window.innerHeight });        
     }
   }
 
   detectBrowser();
+
+  function fullHeightBanner() {
+    if ($body.hasClass('isChrome')) {
+      $main.css({ height: window.innerHeight });
+    }
+  }
+
   fullHeightBanner();
+
 
 </script>
 </body>
