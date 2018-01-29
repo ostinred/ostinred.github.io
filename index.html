@@ -27,59 +27,15 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
   <style>
-    .top {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;		
-      position: relative;
-      width: 100vw;
+    .ost-full {
       height: 100vh;
-      font-size: 10vw;
-      background-color: red;
-    }
-
-    .top span a{
-    	display: block;
-    	font-size: 32px;
-    	font-weight: bold;
-    	color: white;
-    	font-family: Arial, sans-serif;
-    }
-
-    @media screen and (device-aspect-ratio: 40/71) {
-      .isIos .top{
-        height: calc(100vh - 70px);
-      }
-    }
-
-    @media screen and (device-aspect-ratio: 375/667) {
-      .isIos .top{
-        height: calc(100vh - 75px);
-      }
-    }
-
-    @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) and (-webkit-device-pixel-ratio : 3) {
-      .isIos .top{
-        height: calc(100vh - 72px);
-      }
-    }
-
-    @media only screen 
-	and (min-device-width : 768px) 
-	and (max-device-width : 1024px) 
-	and (orientation : portrait) {
-
-      .isIos .top{
-        height: calc(100vh - 50px);
-      }
-}
-
-
+      background: green;
+    }   
   </style>
+  
 </head>
 <body>
-<div class='top'>
+<div class='ost-full'>
   ☺️
   <span><a href="https://github.com/ostinred/">Github ostinred</a></span>
 </div>
