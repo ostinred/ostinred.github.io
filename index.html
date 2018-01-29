@@ -81,7 +81,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 <script>
-
+  var $body = $('body');
   var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
   var isChrome = /Chrome/i.test(navigator.userAgent);
   var mq = $(window).width() < 1023;
@@ -101,7 +101,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
   function fullHeightBanner() {
     if ($body.hasClass('isChrome')) {
-      $main.css({ height: window.innerHeight });
+      $main.css({ height: window.innerHeight 
+      });
     }
   }
 
