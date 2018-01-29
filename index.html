@@ -81,37 +81,36 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 <script>
-    var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-    var isChrome = /Chrome/i.test(navigator.userAgent);
-    var mq = $(window).width() < 1023;
-    var viewportHeight = $('.ost-full').outerHeight();
-    
-    
-    function detectBrowser(){
-      if (isSafari) {
-        $('body').addClass('isIos')
-        alert('isIos');
-        console.log('isIos');
-      } else if ((isChrome) && (mq)) {
-        $('body').addClass('isChrome')
-        alert('isChrome');
-        console.log('isChrome');
-      } else {
-      console.log('not mobile');
-      alert('not mobile');
-      }
-    }
-
-    function fullHeightBanner() {
-      if ($('body').hasClass('isChrome')) {
-        $('.ost-full').css({ height: window.innerHeight });        
-      }
-    }
-
-
-
-detectBrowser();
+  var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+  var isChrome = /Chrome/i.test(navigator.userAgent);
+  var mq = $(window).width() < 1023;
+  var viewportHeight = $('.ost-full').outerHeight();
   
+  
+  function detectBrowser(){
+    if (isSafari) {
+      $('body').addClass('isIos')
+      alert('isIos');
+      console.log('isIos');
+    } else if ((isChrome) && (mq)) {
+      $('body').addClass('isChrome')
+      alert('isChrome');
+      console.log('isChrome');
+    } else {
+    console.log('not mobile');
+    alert('not mobile');
+    }
+  }
+
+  function fullHeightBanner() {
+    if ($('body').hasClass('isChrome')) {
+      $('.ost-full').css({ height: window.innerHeight });        
+    }
+  }
+
+  detectBrowser();
+  fullHeightBanner();
+
 </script>
 </body>
 </html>
