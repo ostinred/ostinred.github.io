@@ -52,8 +52,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     crossorigin="anonymous"></script>
 <script>
     var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+    var isChrome = /Chrome/i.test(navigator.userAgent);
+    
     function detectSafari(){
       if (isSafari) {
+        $('body').addClass('isIos')
+      } else if (isChrome) {
         $('body').addClass('isIos')
       } else {
         
@@ -61,6 +65,21 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     }
 
 detectSafari();
+
+$(document).ready(function(){
+    var ua = navigator.userAgent;
+
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua))
+       $('a.mobile-other').show();
+
+    else if(/Chrome/i.test(ua)) {
+      $('body').addClass('isChrome');
+    }
+       
+
+    else
+       $('a.desktop-other').show();
+});
 
   
 </script>
