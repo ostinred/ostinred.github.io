@@ -57,12 +57,15 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     function detectSafari(){
       if (isSafari) {
         $('body').addClass('isIos')
+        alert('isIos');
         console.log('isIos');
       } else if (isChrome) {
         $('body').addClass('isChrome')
+        alert('isChrome');
         console.log('isChrome');
       } else {
       console.log('not mobile');
+      alert('not mobile');
       }
     }
 
