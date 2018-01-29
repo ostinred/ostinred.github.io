@@ -53,13 +53,14 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <script>
     var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
     var isChrome = /Chrome/i.test(navigator.userAgent);
+    var mq = $(window).width() < 1023)
     
     function detectSafari(){
       if (isSafari) {
         $('body').addClass('isIos')
         alert('isIos');
         console.log('isIos');
-      } else if ((isChrome) && ($(window).width() < 1023)) {
+      } else if ((isChrome) && (mq) {
         $('body').addClass('isChrome')
         alert('isChrome');
         console.log('isChrome');
