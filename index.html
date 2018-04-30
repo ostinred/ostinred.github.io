@@ -2,26 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>DFC</title>
   <meta name="description" content="todo - This website is awesome"> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="shortcut icon" type="image/x-icon" href="img.ico">
-  <meta property="og:title" content="Title">
-  <meta property="og:description" content="todo - This website is awesome">
-  <meta name="twitter:title" content="Title">
-  <meta name="twitter:description" content="todo - This website is awesome">
-  <meta property="og:image" content="screen.png">
-  <meta name="twitter:image" content="screen.png">
-  <meta name="image" content="screen.png">
-	<meta property="og:url" content="https://site.com/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://site.com/">
-  <meta name="url" content="https://site.com/">
-	<link href="https://site.com/" rel="canonical">
-	<link rel="stylesheet" href="./css/app.min.css">
+  <link rel="stylesheet" href="./css/app.min.css">
+  <link rel="icon" href="./img/favicon.png" type="image/png">
 </head>
 <body>
 	<header class='header' role='header'>
@@ -31,22 +18,29 @@
         <source src="./img/video/header-background.webm" type="video/webm">
       </video>
 
-    <img class="header-logo" src="./img/header/header-logo.png">
-    <a href="#" class="btn btn-light">BECOME A MEMBER</a>
+    <img class="header-logo"
+         src="./img/header/header-logo.png"
+         srcset="./img/header/header-logo@2x.png 2x">
+    <a href="form.html" class="btn btn-light">BECOME A MEMBER</a>
 	</header>
 
   <!--events-->
 	<main class="main" role='main'>
     <div class="container-block">
       <div class="default-text first-text">
-        Founded by a collection of leaders who aim to bridge the gap between media, advertising and technology, Digital Future Council hosts quarterly events across the globe, with each event centered around the impact of a different emerging technology. Events are hosted in beautiful and hidden settings, that ignite meaningful debates and conversations. Together, we formulate tangible advice, and craft best practices for the global marketing and advertising communities when integrating new technologies such as AI, Big Data, and blockchain.
+        Digital Future Council was formed by a star-studded collection of leaders across the creative industries with the aim of bridging the gap between media and technology. Members of our community are invited to quarterly events hosted across the globe, with each event centered around the impact of a different emerging technology. Huddled under one roof, in anything but ordinary settings, we aim to ignite meaningful debates and conversations, formulate tangible advice, and promulgate best practices for the global marketing and advertising communities when integrating new technologies, and we have a lot of fun in between.
+      </div>
+
+      <div class="title">
+        Events
       </div>
 
       <div class="events">
         <div class="event__block">
           <div class="event__img-wrapper">
-            <img class="event__img" src="./img/events/event-card-1.jpg"
-                 srcset="img/events/event-card-1@3x.jpg 2x">
+            <img class="event__img"
+                 src="./img/events/event-card-1.jpg"
+                 srcset="./img/events/event-card-1@3x.jpg 2x">
 
             <div id="parallax-eff-1" class="parallax-eff">
               <img data-depth="0.15" class="parallax-bg" src="./img/events/parallax-event-1/background.png">
@@ -265,6 +259,44 @@
 
             <div class="member__company-img company-logo">
               <img src="./img/companies/codec.png">
+            </div>
+          </div>
+
+          <!--Joshua AshleyKlayman-->
+          <div class="member__item">
+            <div class="member__img">
+              <img src="./img/advisors/joshuaashley.png">
+            </div>
+            <div class="member__info">
+              <div class="member__name">
+                Joshua<br /> AshleyKlayman
+              </div>
+              <div class="member__title">
+                Blockchain Lawyer at Morrison Foerster
+              </div>
+            </div>
+
+            <div class="member__company-img company-logo">
+              <img src="./img/companies/MORRISON.png">
+            </div>
+          </div>
+
+          <!--Martin Schnonberger-->
+          <div class="member__item">
+            <div class="member__img">
+              <img src="./img/advisors/martinschonberger.png">
+            </div>
+            <div class="member__info">
+              <div class="member__name">
+                Martin Schnonberger
+              </div>
+              <div class="member__title">
+                VP Partner Development at Sony Music
+              </div>
+            </div>
+
+            <div class="member__company-img company-logo">
+              <img src="./img/companies/sonylogo.png">
             </div>
           </div>
         </div>
@@ -748,7 +780,7 @@
         </div>
 
         <div class="member__btn">
-          <a href="#" class="btn" role="link">BECOME A MEMBER</a>
+          <a href="form.html" class="btn" role="link">BECOME A MEMBER</a>
         </div>
 
       </div>
@@ -763,57 +795,39 @@
         ABOUT DFC
       </div>
 
-      <div class="article__block">
-        <a href="https://medium.com/@DigitalFutureCo/welcome-to-digital-future-council-9c0fa55a7cfa" class="article__title" role="link" target="_blank">
-          Welcome to Digital Future Council
-        </a>
+      <a class="article__block" href="https://medium.com/@DigitalFutureCo/welcome-to-digital-future-council-9c0fa55a7cfa" role="link" target="_blank">
 
-        <div class="article__date">
-          posted on
-          <span>
-            {date of publication}
+        <span class='article__column'>
+          <span class="article__title">
+            Welcome to Digital<br/>
+            Future Council
           </span>
-        </div>
-      </div>
 
-      <div class="article__block">
-        <a href="#" class="article__title" role="link" target="_blank">
-          {Title of the article}
-        </a>
+          <span class="article__additional-info">
+            <span class="article__date">
+              16 hours ago
+            </span>
 
-        <div class="article__date">
-          posted on
-          <span>
-            {date of publication}
+            <span class="article__author">
+              Devin Coldewy
+            </span>
           </span>
-        </div>
-      </div>
+        </span>
 
-      <div class="article__block">
-        <a href="#" class="article__title" role="link" target="_blank">
-          {Title of the article}
-        </a>
-
-        <div class="article__date">
-          posted on
-          <span>
-            {date of publication}
+        <span class="article__column">
+          <span class="article__description">
+            Digital Future Council, a first-of-its-kind think tank, has been formed by a star-studded collection of leaders across the creative industries with the aim of bridging the gap between media…
           </span>
-        </div>
-      </div>
-
-      <div class="article__block">
-        <a href="#" class="article__title" role="link" target="_blank">
-          {Title of the article}
-        </a>
-
-        <div class="article__date">
-          posted on
-          <span>
-            {date of publication}
+        </span>
+        
+        <span class="article__column">
+          <span class="article__img">
+            <img src="https://cdn-images-1.medium.com/max/1200/1*pMmS3PVX3ugSKAbOpNH2uw.jpeg" alt="">
           </span>
-        </div>
-      </div>
+        </span>
+
+      </a>
+
     </div>
 
   </div>
@@ -870,12 +884,12 @@
 
           <ul role="list" class="social__list">
             <li role="listitem">
-              <a href="#" role="link" target="_blank" class="social__link social__link-fb">
+              <a href="https://www.facebook.com/Digital-Future-Council-401452806933174/" role="link" target="_blank" class="social__link social__link-fb">
                 <img src="./img/socials/facebook.svg" alt="Facebook logo">
               </a>
             </li>
             <li role="listitem">
-              <a href="#" role="link" target="_blank" class="social__link social__link-insta">
+              <a href="https://www.instagram.com/digitalfuturecouncil/" role="link" target="_blank" class="social__link social__link-insta">
                 <img src="./img/socials/instagram.svg" alt="Instagram logo">
               </a>
             </li>
@@ -886,7 +900,7 @@
           <div class="footer__contacts-title">
             MEMBERSHIP
           </div>
-          <a href="#" class="btn btn-light" role="link">BECOME A MEMBER</a>
+          <a href="form.html" class="btn btn-light" role="link">BECOME A MEMBER</a>
         </div>
       </div>
     </div>
