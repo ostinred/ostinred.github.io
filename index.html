@@ -228,52 +228,54 @@
 
       <div class="article__wrapper is-scrolled">
         <div class="btn__hover-style">
-          <a href="#" class="article__item" role="link" target="_blank" data-aos="fade-up" data-aos-delay="100">
-          <img src="./img/articles/article-1.png" alt="Article image" />
+          <a href="https://medium.com/@hello_92749/my-life-as-a-student-zoe-durran-f9e56f792320" class="article__item" role="link" target="_blank" data-aos="fade-up" data-aos-delay="100">
+            <span class="zoomed-image">
+              <img src="https://cdn-images-1.medium.com/max/600/1*fGU15g_XOg4muJvg1rlR_Q.png" alt="Article image" />
+            </span>
+
+            <span class="article__info">
+              <span class="article__title">
+                My Life as a Student — Zoe Durran
+              </span>
+              <!--<span class="article__location">-->
+                <!--So you know you want to go to University...-->
+              <!--</span>-->
+              <span class="article__description">
+                Every month, we chat to a student currently enrolled in a UK university, and give them a quick Q&A about their University experience...
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="btn__hover-style">
+          <a href="https://medium.com/@hello_92749/4-questions-you-should-ask-yourself-when-deciding-what-uni-to-go-to-ab7f5668d8b6" class="article__item" role="link" target="_blank" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://cdn-images-1.medium.com/max/800/1*jK-c0B_UqJ1h6fWhg-oQhQ.png" alt="Article image" />
 
           <span class="article__info">
             <span class="article__title">
-              A Day in the Life of Student
+              4 Questions you should ask yourself when deciding what Uni to go to…
             </span>
-            <span class="article__location">
-              The University of Sussex
-            </span>
+            <!--<span class="article__location">-->
+              <!--The University of Sussex-->
+            <!--</span>-->
             <span class="article__description">
-              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies…
+              So you know you want to go to University, but you aren’t quite sure where you want to go.
             </span>
           </span>
         </a>
         </div>
         <div class="btn__hover-style">
-          <a href="#" class="article__item" role="link" target="_blank" data-aos="fade-up" data-aos-delay="300">
-          <img src="./img/articles/article-2.png" alt="Article image" />
+          <a href="https://medium.com/@hello_92749/what-is-the-university-of-brighton-like-5d9ebe38cab9" class="article__item" role="link" target="_blank" data-aos="fade-up" data-aos-delay="500">
+          <img src="https://cdn-images-1.medium.com/max/800/1*5GKo9ewjsYubFUlClrkSFg.jpeg" alt="Article image" />
 
           <span class="article__info">
             <span class="article__title">
-              A Day in the Life of Student
+              What is the University Of Brighton Like?
             </span>
-            <span class="article__location">
-              The University of Sussex
-            </span>
+            <!--<span class="article__location">-->
+              <!--The University of Sussex-->
+            <!--</span>-->
             <span class="article__description">
-              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies…
-            </span>
-          </span>
-        </a>
-        </div>
-        <div class="btn__hover-style">
-          <a href="#" class="article__item" role="link" target="_blank" data-aos="fade-up" data-aos-delay="500">
-          <img src="./img/articles/article-3.png" alt="Article image" />
-
-          <span class="article__info">
-            <span class="article__title">
-              A Day in the Life of Student
-            </span>
-            <span class="article__location">
-              The University of Sussex
-            </span>
-            <span class="article__description">
-              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies…
+              This is part of a coursematch series of mini write-ups on each University in the UK, with a new University overview...
             </span>
           </span>
         </a>
@@ -282,7 +284,7 @@
 
       <div class="btn-wrapper">
         <div class="btn__hover-style">
-          <a href="#" class="btn-color" role="link" target="_blank" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="600">More articles</a>
+          <a href="https://medium.com/@hello_92749" class="btn-color" role="link" target="_blank" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="600">More articles</a>
         </div>
       </div>
 
@@ -357,13 +359,17 @@
         <div class="subtitle" data-aos="fade-right" data-aos-delay="500">
           Please enter the details of your request. A member of our support staff will respond as soon as possible
         </div>
-        <form action="" class="is-form">
-          <textarea class="form__input form__input-textarea" placeholder="Your message" data-aos="fade-right" data-aos-delay="600"></textarea>
-          <input type="email" class="form__input" placeholder="Enter your email" data-aos="fade-right" data-aos-delay="800">
+
+        <form >
+        </form>
+        <form action="https://formspree.io/ostinred@gmail.com"
+              method="POST" class="is-form">
+          <textarea class="form__input form__input-textarea" placeholder="Your message" data-aos="fade-right" data-aos-delay="600" name="message"></textarea>
+          <input type="email" name="_replyto" class="form__input" placeholder="Enter your email" data-aos="fade-right" data-aos-delay="800">
 
           <div class="btn-wrapper">
             <div class="btn__hover-style">
-              <button class="btn-color" type="submit" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="600">Send</button>
+              <input id="sentBtn" class="btn-color" type="submit" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="600" value="Send">
             </div>
           </div>
         </form>
