@@ -12,8 +12,8 @@ window.onload = function (e) {
     document.querySelector('body').classList.add('isIos');
   }
 
-  if (window.innerWidth >= 1170) {
-    input.setAttribute('autofocus', true);
+  if (window.innerWidth < 1170) {
+    input.setAttribute('autofocus', false);
   }
 
   var validateEmail = function validateEmail(email) {
@@ -21,8 +21,7 @@ window.onload = function (e) {
     var result = reExpress.test(String(email).toLowerCase());
 
     if (result) {
-      // send message
-      console.log(input.value); // content.classList.add('is-hidden');
+      console.log(input.value); // send here
 
       showTyped();
     } else {
