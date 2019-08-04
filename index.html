@@ -1,27 +1,53 @@
 <!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>slider</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <title>mePrism</title>
+    <meta name="description" content="todo - This website is awesome" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="img.ico" />
+    <meta property="og:title" content="Title" />
+    <meta property="og:description" content="todo - This website is awesome" />
+    <meta name="twitter:title" content="Title" />
+    <meta name="twitter:description" content="todo - This website is awesome" />
+    <meta property="og:image" content="https://site.com/screen.png" />
+    <meta name="twitter:image" content="https://site.com/creen.png" />
+    <meta name="image" content="https://site.com/screen.png" />
+    <meta property="og:url" content="https://site.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://site.com/" />
+    <meta name="url" content="https://site.com/" />
+    <link href="https://site.com/" rel="canonical" />
+    <link rel="stylesheet" href="./css/app.min.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="slider">
-        <div class="images_wrapper">
-          <img src="./img/1.jpg" alt="img 1">
-          <img src="./img/2.jpg" alt="img 2">
-          <img src="./img/3.jpg" alt="img 3">
-        </div>
+    <main class="is-main" role="main">
+      <img src="./img/opal.jpg" alt="lines" class="img-opal" />
+
+      <div class="is-content">
+        <h1 role="heading"><span>me</span>Prism</h1>
+        <h2>
+          coming soon. enter your email<br />
+          for updates & early access.
+        </h2>
+
+        <form action="" role="form" class="is-form">
+          <input type="text" role="" role="textbox" autofocus class="is-input" />
+        </form>
       </div>
-      <div class="button_wrapper">
-        <button class="button button_prev" type="button"><i class="fas fa-chevron-left"></i></button>
-        <button class="button button_next" type="button"><i class="fas fa-chevron-right"></i></button>
+      <div id="typed-strings" class="was-sent">
+        <p>
+          thank you. we will be in touch.
+        </p>
       </div>
-    </div>
-    <script src="main.js" async defer></script>
+      <span id="typed"></span>
+      <img src="./img/lines.png" alt="lines" class="img-lines" />
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
