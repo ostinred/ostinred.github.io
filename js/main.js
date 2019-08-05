@@ -6,13 +6,14 @@ var content = document.querySelector('.is-content');
 var img = document.querySelector('.img-opal');
 var typedString = document.querySelector('.was-sent');
 var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+var mobile = window.innerWidth < 1170;
 
 window.onload = function (e) {
   if (isSafari) {
     document.querySelector('body').classList.add('isIos');
   }
 
-  if (window.innerWidth < 1170) {
+  if (mobile) {
     input.setAttribute('autofocus', false);
   }
 
@@ -24,12 +25,20 @@ window.onload = function (e) {
       console.log(input.value); // send here
 
       showTyped();
+
+      if (mobile) {
+        input.blur();
+      }
     } else {
       form.classList.add('has-error');
     }
 
     return;
   };
+
+  input.addEventListener('keydown', _.debounce(function () {
+    return validateEmail(input.value);
+  }, 2000));
 
   form.onsubmit = function (e) {
     e.preventDefault();
