@@ -1,67 +1,60 @@
 "use strict";
 
-var form = document.querySelector('.is-form');
-var input = document.querySelector('.is-input');
-var content = document.querySelector('.is-content');
-var img = document.querySelector('.img-opal');
-var typedString = document.querySelector('.was-sent');
-var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-var mobile = window.innerWidth < 1170;
+var r = document.querySelector('.result');
+var rp = document.querySelector('.result p span');
+var ri = document.querySelector('.result p i');
+var btn = document.querySelector('.is-button');
+var close = document.querySelector('.btn-close');
+var general = document.querySelector('#general');
+var current = document.querySelector('#current');
 
-window.onload = function (e) {
-  if (isSafari) {
-    document.querySelector('body').classList.add('isIos');
-  }
+btn.onclick = function () {
+  var g = general.value;
+  var c = current.value;
 
-  if (mobile) {
-    input.setAttribute('autofocus', false);
-  }
+  if (g.length && c.length) {
+    r.classList.add('is-active');
+    var res = 100 - 100 / general.value * current.value;
 
-  var validateEmail = function validateEmail(email) {
-    var reExpress = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    var result = reExpress.test(String(email).toLowerCase());
+    var ic = function ic(n) {
+      var icon = '';
 
-    if (result) {
-      console.log(input.value); // send here
-
-      showTyped();
-
-      if (mobile) {
-        input.blur();
+      if (res > 10) {
+        icon = '😶';
       }
-    } else {
-      form.classList.add('has-error');
-    }
 
-    return;
-  };
+      if (res > 20) {
+        icon = '😨';
+      }
 
-  input.addEventListener('keydown', _.debounce(function () {
-    return validateEmail(input.value);
-  }, 2000));
+      if (res > 30) {
+        icon = '😥';
+      }
 
-  form.onsubmit = function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    validateEmail(input.value);
-    return;
-  };
+      if (res > 40) {
+        icon = '😐';
+      }
 
-  var showTyped = function showTyped() {
-    content.classList.add('is-hidden');
-    content.addEventListener('transitionend', function (e) {
-      e.target.style.display = 'none';
-      document.querySelector('#typed').style.display = 'block';
-      var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        typeSpeed: 60,
-        smartBackspace: true,
-        fadeOut: true
-      });
-    });
-  };
+      if (res > 50) {
+        icon = '😌';
+      }
 
-  img.onclick = function () {
-    showTyped();
-  };
+      if (res > 70) {
+        icon = '😊';
+      }
+
+      if (res > 90) {
+        icon = '🥰';
+      }
+
+      return icon;
+    };
+
+    rp.innerHTML = Math.ceil(res) + '%';
+    ri.innerHTML = ic(res);
+  }
+};
+
+close.onclick = function () {
+  r.classList.remove('is-active');
 };

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>mePrism</title>
-    <meta name="description" content="mePrism - some description" />
+    <title>Title</title>
+    <meta name="description" content="Website - description" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,50 +13,46 @@
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
     <meta property="og:url" content="https://site.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="mePrism" />
-    <meta property="og:description" content="mePrism - description" />
+    <meta property="og:title" content="Title" />
+    <meta property="og:description" content="Website - description" />
     <meta property="og:image" content="./img/screen.jpg" />
     <meta property="og:image:type" content="image/jpg" />
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="353" />
-    <meta property="og:image:alt" content="The screen of mePrism website" />
+    <meta property="og:image:width" content="768" />
+    <meta property="og:image:height" content="429" />
+    <meta property="og:image:alt" content="The screen of YOUR website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="mePrism" />
-    <meta name="twitter:title" content="mePrism - description" />
-    <meta name="twitter:description" content="Go to mePrism" />
+    <meta name="twitter:site" content="Title" />
+    <meta name="twitter:title" content="Title" />
+    <meta name="twitter:description" content="Go to Website" />
     <meta name="twitter:image" content="./img/screen.jpg" />
-    <meta name="twitter:image:alt" content="The screen of mePrism website" />
+    <meta name="twitter:image:alt" content="The screen of YOUR website" />
 
     <link href="https://site.com/" rel="canonical" />
     <link rel="stylesheet" href="./css/app.min.css" />
   </head>
   <body>
-    <main class="is-main" role="main">
-      <img src="./img/opal.jpg" alt="lines" class="img-opal" />
-
-      <div class="is-content">
-        <h1 role="heading"><span>me</span>Prism</h1>
-        <h2>
-          coming soon. enter your email<br />
-          for updates & early access.
-        </h2>
-
-        <form action="" role="form" class="is-form">
-          <input type="text" role="textbox" class="is-input" autofocus />
-        </form>
+    <div class="wrapper">
+      <div class="form-input">
+        <label for="">Общее колличество дней разлуки</label>
+        <input type="number" class="is-input" type="text" id="general" />
       </div>
-      <div id="typed-strings" class="was-sent">
-        <p>
-          thank you. we will be in touch.
-        </p>
-      </div>
-      <span id="typed"></span>
-      <img src="./img/lines.png" alt="lines" class="img-lines" />
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+      <div class="form-input">
+        <label for="">Текущий день</label>
+        <input type="number" class="is-input" type="text" id="current" />
+      </div>
+
+      <button class="is-button">Прояснить</button>
+    </div>
+    <div class="result">
+      <div class="btn-close">x</div>
+      <p>
+        уровень ванили в отношениях:
+        <span> </span>
+        <i></i>
+      </p>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
