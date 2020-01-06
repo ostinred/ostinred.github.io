@@ -1,497 +1,1271 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>MOSHN | Homepage</title>
+    <meta name="description" content="MOSHN - some description" />
+    <meta name="keywords" content="MOSHN, MOSHN, MOSHN, MOSHN" />
+    <!-- head -->
     <meta charset="UTF-8" />
-    <title>HABIT</title>
-    <meta
-      name="description"
-      content="A new approach to harassment prevention training, founded by leaders in the
-#MeToo movement and the Time's Up Legal Defense Fund"
-    />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="stylesheet"
-      href="http://shionstudio.com/wp-content/themes/semplice4/assets/css/frontend.min.css"
-    />
-    <link rel="stylesheet" href="./css/app.min.css" />
+<meta property="og:site_name" content="MOSHN site name" />
+<meta name="twitter:card" content="summary" />
+<meta property="og:url" content="https://dev.moshn.ai" />
+<meta name="twitter:url" content="https://dev.moshn.ai" />
+<meta property="og:title" content="MOSHN site title" />
+<meta name="twitter:title" content="MOSHN site title" />
+<meta
+  property="og:description"
+  content="The user trust system is a fundamental cornerstone of Discourse. Trust levels are a way of… Sandboxing new users in your community so that they cannot accidentally hurt themselves, or other users while they are learning what to do. Granting experienced users more rights over time, so that they can help everyone maintain and moderate the community they generously contribute so much of their time to. As documented in Community Building on the Web, there is a natural progression for participants in any community. This [&hellip;]"
+/>
+<meta
+  name="twitter:description"
+  content="The user trust system is a fundamental cornerstone of Discourse. Trust levels are a way of… Sandboxing new users in your community so that they cannot accidentally hurt themselves, or other users while they are learning what to do. Granting experienced users more rights over time, so that they can help everyone maintain and moderate the community they generously contribute so much of their time to. As documented in Community Building on the Web, there is a natural progression for participants in any community. This [&hellip;]"
+/>
+
+<meta
+  property="og:image"
+  content="https://dev.moshn.ai/assets/img/screen.jpg"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:image"
+  content="https://dev.moshn.ai/assets/img/screen.jpg"
+/>
+<meta property="telegram_channel" content="turbolabit" />
+
+<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/app.min.css" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+/>
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"
+/>
+<style>
+  #preloading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+  }
+
+  #preloading.is-hidden {
+    opacity: 0;
+    transition: opacity 0.1s 0.2s;
+  }
+
+  #preloading.is-hidden img {
+    transform: scale(0);
+    transform-origin: 0 0;
+    transition: 0.25s;
+  }
+
+  #preloading img {
+    width: 200px;
+  }
+</style>
+
+    <!-- end of head -->
   </head>
   <body>
-    <div class="habit-anim">
-    <div class="is-main">
-      <div class="is-main__mobile">
-        <div id="mobile-carousel" class="mobile-screens">
-          <div class="is-main-first-screen">
-            <svg
-              width="226"
-              height="33"
-              viewBox="0 0 226 33"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="none" fill-rule="evenodd">
-                <g id="0.0.1_Hamburger_Open" transform="translate(-777 -829)">
-                  <g id="HAB_Logo_121218-02" transform="translate(777 829)">
-                    <path
-                      id="Path"
-                      fill="#333"
-                      d="M18.437 19.94H9.515V31.5H0V.5h9.515v11.78h8.922V.5H28v31h-9.563z"
-                    />
-                    <path
-                      d="M40.456 21.5C43.61 21.5 46 23.975 46 26.998c0 3.028-2.39 5.502-5.544 5.502-3.07 0-5.456-2.475-5.456-5.502 0-3.024 2.387-5.498 5.456-5.498z"
-                      id="Path"
-                      fill="#F65058"
-                    />
-                    <path
-                      d="M72.652 31.5l-1.067-3.588H61.102L60.035 31.5H50L61.505.5h9.72L83 31.5H72.652zM66.368 9.8l-3.301 11.423h6.597L66.368 9.8z"
-                      id="Shape"
-                      fill="#333"
-                      fill-rule="nonzero"
-                    />
-                    <path
-                      d="M93.454 21.5c3.157 0 5.546 2.475 5.546 5.498 0 3.028-2.39 5.502-5.546 5.502C90.39 32.5 88 30.025 88 26.998c0-3.024 2.39-5.498 5.454-5.498z"
-                      id="Path"
-                      fill="#FFA38B"
-                    />
-                    <path
-                      d="M105 .5h15.48c8.667 0 10.292 5.135 10.292 8.37 0 3.85-3.07 6.421-5.506 6.908 2.033.177 5.734 2.48 5.734 7.086 0 3.231-1.672 8.636-10.339 8.636h-15.66V.5H105zm12.548 12.177c2.845 0 3.837-1.594 3.837-3.145 0-1.284-.632-3.098-3.837-3.098h-3.113v6.242h3.113v.001zm-3.113 6.022v6.335h3.205c2.84 0 3.837-1.55 3.837-3.191 0-1.238-.723-3.145-3.837-3.145h-3.205z"
-                      id="Shape"
-                      fill="#333"
-                      fill-rule="nonzero"
-                    />
-                    <path
-                      d="M142.456 21.5c3.154 0 5.544 2.475 5.544 5.498 0 3.028-2.39 5.502-5.544 5.502-3.07 0-5.456-2.475-5.456-5.502 0-3.024 2.387-5.498 5.456-5.498z"
-                      id="Path"
-                      fill="#F9C2CC"
-                    />
-                    <path id="Path" fill="#333" d="M158 .5h9v31h-9z" />
-                    <path
-                      d="M179.454 21.5c3.157 0 5.546 2.475 5.546 5.498 0 3.028-2.39 5.502-5.546 5.502-3.065 0-5.454-2.475-5.454-5.502 0-3.024 2.39-5.498 5.454-5.498z"
-                      id="Path"
-                      fill="#A8D5BA"
-                    />
-                    <path
-                      id="Path"
-                      fill="#333"
-                      d="M196.386 8.382H190V.5h22v7.882h-6.386V31.5h-9.228V8.382z"
-                    />
-                    <path
-                      d="M220.454 21.5c3.157 0 5.546 2.475 5.546 5.498 0 3.028-2.39 5.502-5.546 5.502-3.065 0-5.454-2.475-5.454-5.502 0-3.024 2.39-5.498 5.454-5.498z"
-                      id="Path"
-                      fill="#004986"
-                    />
-                  </g>
-                </g>
-              </g>
-            </svg>
+    <div class="is-homepage">
+      <!-- header -->
+      <div id="preloading">
+  <img src="./../assets/img/logo-lg.svg" alt="MOSHN logo" />
+</div>
+<header role="header" class="is-header">
+  <div class="is-header__wrapper">
+    <div class="is-header__row">
+      <a href="/" role="link" class="is-logo">
+        <img src="./../assets/img/logo.svg" alt="Logo" />
+      </a>
 
-            <div class="is-main__copies">
-              A new approach to harassment prevention training, founded by
-              leaders in the #MeToo movement and the Time's Up Legal Defense
-              Fund.
-            </div>
+      <div id="navBtn" class="navigation-btn__wrapper">
+        <button class="navigation-btn">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav role="navigation" class="is-navigation">
+      <ul role="list">
+        <li role="listitem">
+          <a href="about.html" role="link" class="navigation-link"
+            >About MOSHN</a
+          >
+        </li>
+        <li role="listitem">
+          <a href="blog.html" role="link" class="navigation-link">Blog</a>
+        </li>
+        <li role="listitem">
+          <a href="#contacts" role="link" class="navigation-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="is-header__socials">
+      <ul role="list">
+        <li role="listitem">
+          <a
+            href="https://twitter.com/mobilitymoshn"
+            role="link"
+            title="Twitter"
+            class="is-header__social"
+            target="_blank"
+          >
+            <i class="icon icon-twitter"></i>
+          </a>
+        </li>
+        <li role="listitem">
+          <a
+            href="https://www.facebook.com/stayinmoshn/ "
+            role="link"
+            title="Facebook"
+            class="is-header__social"
+            target="_blank"
+          >
+            <i class="icon icon-facebook-light"></i>
+          </a>
+        </li>
+        <li role="listitem">
+          <a
+            href="https://www.instagram.com/moshnmobility/"
+            role="link"
+            title="Instagram"
+            class="is-header__social"
+            target="_blank"
+          >
+            <i class="icon icon-insta"></i>
+          </a>
+        </li>
+      </ul>
+
+      <button role="button" type="button" class="is-btn-lg" data-modal="form">
+        Subscribe
+      </button>
+    </div>
+  </div>
+</header>
+
+      <!-- end of header -->
+
+      <div class="is-slider">
+        <div class="is-slider__menu">
+          <div class="slider-nav-header">
+            <p>Scroll<i class="icon icon-arrow-right"></i></p>
           </div>
+          <ul id="slider-menu">
+            <li>
+              <button data-id="0" type="button" role="button">
+                <span></span>
+              </button>
+            </li>
+            <li>
+              <button data-id="1" type="button" role="button">
+                <span></span>
+              </button>
+            </li>
+            <li>
+              <button data-id="2" type="button" role="button">
+                <span></span>
+              </button>
+            </li>
+            <li>
+              <button data-id="3" type="button" role="button">
+                <span></span>
+              </button>
+            </li>
+            <li>
+              <button data-id="4" type="button" role="button">
+                <span></span>
+              </button>
+            </li>
+            <li>
+              <button data-id="5" type="button" role="button">
+                <span></span>
+              </button>
+            </li>
+          </ul>
+        </div>
 
-          <div class="is-main-screen bg-red">
-            <div class="is-main__title">
-              Harassment
-            </div>
-
-            <div class="is-main__copies">
-              <span>
-                Aggressive or unwelcome conduct
-              </span>
-              A new approach to harassment prevention training, founded by
-              leaders in the #MeToo movement and the Time's Up Legal Defense
-              Fund.
-            </div>
+        <div class="is-slider__header">
+          <div class="is-slider__container">
+            <img src="./../assets/img/slider/logo-title.svg" alt="MOSHN" />
           </div>
+        </div>
 
-          <div class="is-main-screen bg-orange">
-            <div class="is-main__title">
-              Acceptance
+        <div class="is-slider__footer">
+          <div class="is-slider__container">
+            <div class="is-slider__half">
+              <button
+                role="button"
+                type="button"
+                class="is-btn-lg"
+                data-modal="form"
+              >
+                Subscribe
+              </button>
             </div>
 
-            <div class="is-main__copies">
-              <span>
-                Behavior that fosters a cohesive work environment
-              </span>
-              Done through encouraging employees to respect one another despite
-              their diverse beliefs, cultures, and other differences.
-            </div>
-          </div>
+            <div class="is-slider__half">
+              <nav role="navigation" class="is-navigation">
+                <ul role="list">
+                  <li role="listitem">
+                    <a href="about.html" role="link" class="navigation-link"
+                      >About MOSHN</a
+                    >
+                  </li>
+                  <li role="listitem">
+                    <a href="blog.html" role="link" class="navigation-link"
+                      >Blog</a
+                    >
+                  </li>
+                  <li role="listitem">
+                    <a href="#contacts" role="link" class="navigation-link"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
 
-          <div class="is-main-screen bg-pink">
-            <div class="is-main__title">
-              Bias
-            </div>
-
-            <div class="is-main__copies">
-              <span>
-                Favor shown to one individual or group over others
-              </span>
-              Conscious or unconscious, it’s unfair to exclude potential hires
-              and employees from experiences for which they would otherwise be
-              qualified.
-            </div>
-          </div>
-
-          <div class="is-main-screen bg-green">
-            <div class="is-main__title">
-              Inclusion
-            </div>
-
-            <div class="is-main__copies">
-              <span>
-                Respect for and appreciation of our differences
-              </span>
-              Welcoming and celebrating every employee regardless of background
-              fosters a rewarding and productive workplace.
-            </div>
-          </div>
-
-          <div class="is-main-screen bg-blue">
-            <div class="is-main__title">
-              Training
-            </div>
-
-            <div class="is-main__copies">
-              <span>
-                Why we’re here
-              </span>
-              Our goal is to foster acceptance and inclusion by eliminating
-              harassment and bias from the workplace. Let’s get started.
+              <div class="is-header__socials">
+                <ul role="list">
+                  <li role="listitem">
+                    <a
+                      href="https://twitter.com/mobilitymoshn"
+                      role="link"
+                      title="Twitter"
+                      class="is-header__social"
+                      target="_blank"
+                    >
+                      <i class="icon icon-twitter"></i>
+                    </a>
+                  </li>
+                  <li role="listitem">
+                    <a
+                      href="https://www.facebook.com/stayinmoshn/"
+                      role="link"
+                      title="Facebook"
+                      class="is-header__social"
+                      target="_blank"
+                    >
+                      <i class="icon icon-facebook-light"></i>
+                    </a>
+                  </li>
+                  <li role="listitem">
+                    <a
+                      href="https://www.instagram.com/moshnmobility/"
+                      role="link"
+                      title="Instagram"
+                      class="is-header__social"
+                      target="_blank"
+                    >
+                      <i class="icon icon-insta"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="mobile-pagination"></div>
-      </div>
-      <div class="is-main__desktop">
-        <div class="is-main__content">
-          <div class="is-title">
-            <div
-              class="is-title-letter__wrapper is-title-letter__wrapper-1"
-              data-letter="1"
-            >
-              <div class="is-title-overlaySVG">
-                <svg viewBox="-1 -1 2 2">
-                  <circle cx="0" cy="0" r="1" fill="#f95053">
-                    <animateTransform
-                      id="svgDot1"
-                      begin
-                      attributeName="transform"
-                      from="0 0"
-                      to="110 110"
-                      type="scale"
-                      dur=".25s"
-                      fill="freeze"
-                    />
-                  </circle>
-                </svg>
-              </div>
-              <span class="is-title-letter">
-                H
-              </span>
-              <div class="is-title-letters__additional">
-                <span class="is-title-letter">
-                  a
-                </span>
-                <span class="is-title-letter">
-                  r
-                </span>
-                <span class="is-title-letter">
-                  a
-                </span>
-                <span class="is-title-letter">
-                  s
-                </span>
-                <span class="is-title-letter">
-                  s
-                </span>
-                <span class="is-title-letter">
-                  m
-                </span>
-                <span class="is-title-letter">
-                  e
-                </span>
-                <span class="is-title-letter">
-                  n
-                </span>
-                <span class="is-title-letter">
-                  t
-                </span>
-              </div>
 
-              <span>
-                <i class="habit-icon-circle text-red"></i>
-              </span>
-            </div>
-            <div
-              class="is-title-letter__wrapper is-title-letter__wrapper-2"
-              data-letter="2"
-            >
-              <div class="is-title-overlaySVG">
-                <svg viewBox="-1 -1 2 2">
-                  <circle cx="0" cy="0" r="1" fill="#ffa38b">
-                    <animateTransform
-                      id="svgDot2"
-                      begin
-                      attributeName="transform"
-                      from="0 0"
-                      to="110 110"
-                      type="scale"
-                      dur=".25s"
-                      fill="freeze"
-                    />
-                  </circle>
-                </svg>
-              </div>
-              <span class="is-title-letter">
-                A
-              </span>
-              <div class="is-title-letters__additional">
-                <span class="is-title-letter">
-                  c
-                </span>
-                <span class="is-title-letter">
-                  c
-                </span>
-                <span class="is-title-letter">
-                  e
-                </span>
-                <span class="is-title-letter">
-                  p
-                </span>
-                <span class="is-title-letter">
-                  t
-                </span>
-                <span class="is-title-letter">
-                  a
-                </span>
-                <span class="is-title-letter">
-                  n
-                </span>
-                <span class="is-title-letter">
-                  c
-                </span>
-                <span class="is-title-letter">
-                  e
-                </span>
-              </div>
-              <span>
-                <i class="habit-icon-circle text-orange"></i>
-              </span>
-            </div>
-            <div
-              class="is-title-letter__wrapper is-title-letter__wrapper-3"
-              data-letter="3"
-            >
-              <div class="is-title-overlaySVG">
-                <svg viewBox="-1 -1 2 2">
-                  <circle cx="0" cy="0" r="1" fill="#f9c2cc">
-                    <animateTransform
-                      id="svgDot3"
-                      begin
-                      attributeName="transform"
-                      from="0 0"
-                      to="110 110"
-                      type="scale"
-                      dur=".25s"
-                      fill="freeze"
-                    />
-                  </circle>
-                </svg>
-              </div>
-              <span class="is-title-letter">
-                B
-              </span>
-              <div class="is-title-letters__additional">
-                <span class="is-title-letter">
-                  i
-                </span>
-                <span class="is-title-letter">
-                  a
-                </span>
-                <span class="is-title-letter">
-                  s
-                </span>
-              </div>
-              <span>
-                <i class="habit-icon-circle text-pink"></i>
-              </span>
-            </div>
-            <div
-              class="is-title-letter__wrapper is-title-letter__wrapper-4"
-              data-letter="4"
-            >
-              <div class="is-title-overlaySVG">
-                <svg viewBox="-1 -1 2 2">
-                  <circle cx="0" cy="0" r="1" fill="#a8d5b9">
-                    <animateTransform
-                      id="svgDot4"
-                      begin
-                      attributeName="transform"
-                      from="0 0"
-                      to="110 110"
-                      type="scale"
-                      dur=".25s"
-                      fill="freeze"
-                    />
-                  </circle>
-                </svg>
-              </div>
-              <span class="is-title-letter">
-                I
-              </span>
-              <div class="is-title-letters__additional">
-                <span class="is-title-letter">
-                  n
-                </span>
-                <span class="is-title-letter">
-                  c
-                </span>
-                <span class="is-title-letter">
-                  l
-                </span>
-                <span class="is-title-letter">
-                  u
-                </span>
-                <span class="is-title-letter">
-                  s
-                </span>
-                <span class="is-title-letter">
-                  i
-                </span>
-                <span class="is-title-letter">
-                  o
-                </span>
-                <span class="is-title-letter">
-                  n
-                </span>
-              </div>
-              <span>
-                <i class="habit-icon-circle text-green"></i>
-              </span>
-            </div>
-            <div
-              class="is-title-letter__wrapper  is-title-letter__wrapper-5"
-              data-letter="5"
-            >
-              <div class="is-title-overlaySVG">
-                <svg viewBox="-1 -1 2 2">
-                  <circle cx="0" cy="0" r="1" fill="#014888">
-                    <animateTransform
-                      id="svgDot5"
-                      begin
-                      attributeName="transform"
-                      from="0 0"
-                      to="110 110"
-                      type="scale"
-                      dur=".25s"
-                      fill="freeze"
-                    />
-                  </circle>
-                </svg>
-              </div>
-              <span class="is-title-letter">
-                T
-              </span>
-              <div class="is-title-letters__additional">
-                <span class="is-title-letter">
-                  r
-                </span>
-                <span class="is-title-letter">
-                  a
-                </span>
-                <span class="is-title-letter">
-                  i
-                </span>
-                <span class="is-title-letter">
-                  n
-                </span>
-                <span class="is-title-letter">
-                  i
-                </span>
-                <span class="is-title-letter">
-                  n
-                </span>
-                <span class="is-title-letter">
-                  g
-                </span>
-              </div>
-              <span>
-                <i class="habit-icon-circle text-blue"></i>
-              </span>
-            </div>
-            <div class="is-title-info__wrapper">
-              <div class="is-title-info is-title-info-1">
-                <div class="is-title-subtitle">
-                  Aggressive or unwelcome conduct
+        <div id="fullpage" class="is-slider__body">
+          <div class="section section-0" data-anchor="section-0">
+            <div class="is-slider__item">
+              <div class="is-slider__container">
+                <div class="is-slider__text">
+                  <img
+                    class="is-slider__smile"
+                    src="./../assets/img/smile.svg"
+                  />
+                  <div class="banner-title__primary">
+                    take control of your <br />
+                    business - we’ll take CARE <br />
+                    of your vehicles
+                  </div>
+
+                  <ul class="is-slider__list" role="listitem">
+                    <li role="list">
+                      Easy and fast approval
+                    </li>
+                    <li role="list">
+                      No money down. Sign up for as many or few vehicles as you
+                      need and adjust overtime as your business needs change
+                    </li>
+                    <li role="list">
+                      Subscribe to additional vehicles as business needs change
+                    </li>
+                  </ul>
                 </div>
 
-                <div class="is-title-copies">
-                  Based on a variety of factors, including race, religion, or
-                  sex. Harassment is never okay in the workplace.
-                </div>
-              </div>
-              <div class="is-title-info is-title-info-2">
-                <div class="is-title-subtitle">
-                  Behavior that fosters a cohesive work environment
-                </div>
-
-                <div class="is-title-copies">
-                  Done through encouraging employees to respect one another
-                  despite their diverse beliefs, cultures, and other
-                  differences.
-                </div>
-              </div>
-              <div class="is-title-info is-title-info-3">
-                <div class="is-title-subtitle">
-                  Favor shown to one individual or group over others
-                </div>
-
-                <div class="is-title-copies">
-                  Conscious or unconscious, it’s unfair to exclude potential
-                  hires and employees from experiences for which they would
-                  otherwise be qualified.
-                </div>
-              </div>
-              <div class="is-title-info is-title-info-4">
-                <div class="is-title-subtitle">
-                  Respect for and appreciation of our differences
-                </div>
-
-                <div class="is-title-copies">
-                  Welcoming and celebrating every employee regardless of
-                  background fosters a rewarding and productive workplace.
-                </div>
-              </div>
-              <div class="is-title-info is-title-info-5">
-                <div class="is-title-subtitle">
-                  Why we’re here
-                </div>
-
-                <div class="is-title-copies">
-                  Our goal is to foster acceptance and inclusion by eliminating
-                  harassment and bias from the workplace. Let’s get started.
+                <div class="is-slider__block">
+                  <div class="is-slider__img-wrapper">
+                    <img src="./../assets/img/slider/slider-0.png" alt="" />
+                    <p class="is-slider__subtitle">
+                      Vehicle<br />
+                      subscription
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <h1 class="is-h1">
-            <span
-              >A new approach to harassment prevention training, founded by
-              leaders in the</span
-            >
-            #MeToo movement and the Time's Up Legal Defense Fund
-          </h1>
+
+          <div class="section section-1" data-anchor="section-1">
+            <div class="is-slider__item">
+              <div class="is-slider__container">
+                <div class="is-slider__text">
+                  <img
+                    class="is-slider__smile"
+                    src="./../assets/img/smile.svg"
+                  />
+                  <div class="banner-title__primary">
+                    Hi! I’m mo!<br />
+                    Presenting a<br />
+                    fleet manager<br />
+                    in your pocket
+                  </div>
+
+                  <ul class="is-slider__list" role="listitem">
+                    <li role="list">
+                      Easy and fast approval
+                    </li>
+                    <li role="list">
+                      Membership instead of purchase. Sign up for as many or few
+                      vehicles as you need and adjust overtime as your business
+                      needs change
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="is-slider__block">
+                  <img
+                    src="./../assets/img/slider/phone-arm.png"
+                    alt=""
+                    class="is-slider__img-additional"
+                  />
+
+                  <img
+                    src="./../assets/img/slider/phone-arm-hd.png"
+                    alt=""
+                    class="is-slider__img-additional_HD"
+                  />
+
+                  <div class="is-slider__img-wrapper">
+                    <img src="./../assets/img/slider/slider-1.png" alt="" />
+
+                    <p class="is-slider__subtitle">
+                      Vehicle <br />
+                      subscription
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section section-2" data-anchor="section-2">
+            <div class="is-slider__item">
+              <div class="is-slider__container">
+                <div class="is-slider__text">
+                  <img
+                    class="is-slider__smile"
+                    src="./../assets/img/smile.svg"
+                  />
+                  <div class="banner-title__primary">
+                    Subscription <br />
+                    options
+                  </div>
+
+                  <ul class="is-slider__list" role="listitem">
+                    <li role="list">
+                      Vehicle subscription - includes Car, Upfit, Support and
+                      maintenance.
+                    </li>
+                    <li role="list">
+                      Your Vehicle, Our Service - Fleet management software and
+                      services for the vehicles you own.
+                    </li>
+                    <li role="list">
+                      One off Services
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="is-slider__block">
+                  <div class="is-slider__img-wrapper">
+                    <img src="./../assets/img/slider/slider-2.png" alt="" />
+                    <p class="is-slider__subtitle">
+                      subscription Vehicle trade-in for your current vehicles
+                      <br />
+                      Simple and competitive rates
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section section-3" data-anchor="section-3">
+            <div class="is-slider__item">
+              <div class="is-slider__container">
+                <div class="is-slider__text">
+                  <img
+                    class="is-slider__smile"
+                    src="./../assets/img/smile.svg"
+                  />
+                  <div class="banner-title__primary">
+                    What can moshn <br />
+                    do for YOU
+                  </div>
+
+                  <ul class="is-slider__list" role="listitem">
+                    <li role="list">
+                      Free up work capital with one monthly payment
+                    </li>
+                    <li role="list">
+                      No down payment, no long term commitment required
+                    </li>
+                    <li role="list">
+                      Keep your fleet young and fresh, keeping up with
+                      technology and safety advancements
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="is-slider__block">
+                  <div class="is-slider__img-wrapper">
+                    <img src="./../assets/img/slider/slider-3.png" alt="" />
+                    <p class="is-slider__subtitle">
+                      Subscription options
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section section-4" data-anchor="section-4">
+            <div class="is-slider__item">
+              <div class="is-slider__container">
+                <div class="is-slider__text">
+                  <img
+                    class="is-slider__smile"
+                    src="./../assets/img/smile.svg"
+                  />
+                  <div class="banner-title__primary">
+                    Your Vehicle,<br />
+                    Our Service
+                  </div>
+
+                  <ul class="is-slider__list" role="listitem">
+                    <li role="list">
+                      Your Vehicle, Our Service - Fleet management software and
+                      services for the vehicles you own.
+                    </li>
+                    <li role="list">
+                      One off Services
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="is-slider__block">
+                  <div class="is-slider__img-wrapper">
+                    <img src="./../assets/img/slider/slider-4.png" alt="" />
+                    <p class="is-slider__subtitle">
+                      Subscription options
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section section-5" data-anchor="section-5">
+            <div class="is-slider__item">
+              <div class="is-slider__container">
+                <div class="is-slider__text">
+                  <img
+                    class="is-slider__smile"
+                    src="./../assets/img/smile.svg"
+                  />
+                  <div class="banner-title__primary">
+                    Fleet management <br />
+                    Services
+                  </div>
+
+                  <ul class="is-slider__list" role="listitem">
+                    <li role="list">
+                      Leave the vehicle care to us. Free up time to focus on
+                      your core business
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="is-slider__block">
+                  <div class="is-slider__img-wrapper">
+                    <img src="./../assets/img/slider/slider-5.png" alt="" />
+                    <p class="is-slider__subtitle">
+                      FLEET MANAGEMENT INSTRUMENTS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section is-website " data-anchor="section-6">
+            <!-- cars -->
+            <div class="are-cars">
+  <div class="are-cars__wrapper">
+    <div class="banner-title__primary">
+      MOSHN CAR MADE
+    </div>
+
+    <div class="are-cars__images">
+      <img src="./../assets/img/cars/mercedes.png" alt="Mercedes logo" />
+      <img src="./../assets/img/cars/tesla.png" alt="Tesla logo" />
+      <img src="./../assets/img/cars/dodge.png" alt="Dodge logo" />
+    </div>
+  </div>
+</div>
+
+            <!-- end of cars -->
+
+            <!-- tabs -->
+            <div class="are-tabs">
+  <div class="are-tabs__wrapper">
+    <div class="banner-title__primary">
+      Sample moshn calculation
+    </div>
+
+    <div class="are-tabs__header">
+      <button
+        role="button"
+        type="button"
+        class="are-tabs__button"
+        data-tab="cityvan"
+      >
+        city van
+      </button>
+      <button
+        role="button"
+        type="button"
+        class="are-tabs__button"
+        data-tab="pickup"
+      >
+        Pickup
+      </button>
+      <button
+        role="button"
+        type="button"
+        class="are-tabs__button"
+        data-tab="van"
+      >
+        Van
+      </button>
+
+      <div id="tabsLine" class="are-tabs__line"></div>
+    </div>
+
+    <div class="are-tabs__body">
+      <div class="atb-configuration">
+        <ul role="list">
+          <li role="listitem" class="atb-configuration__item">
+            <div class="atb-configuration__img">
+              <img src="./../assets/img/tabs/armchair.png" alt="seets icon" />
+            </div>
+
+            <p class="atb-configuration__info">
+              <span data-tab="cityvan">
+                5
+              </span>
+              <span data-tab="pickup">
+                6
+              </span>
+              <span data-tab="van">
+                7
+              </span>
+              seats
+            </p>
+          </li>
+
+          <li role="listitem" class="atb-configuration__item">
+            <div class="atb-configuration__img">
+              <img src="./../assets/img/tabs/engine.png" alt="engine icon" />
+            </div>
+
+            <p class="atb-configuration__info">
+              <span data-tab="cityvan">
+                210
+              </span>
+              <span data-tab="pickup">
+                220
+              </span>
+              <span data-tab="van">
+                230
+              </span>
+              hp
+            </p>
+          </li>
+
+          <li role="listitem" class="atb-configuration__item">
+            <div class="atb-configuration__img">
+              <img src="./../assets/img/tabs/fuel.png" alt="fuel icon" />
+            </div>
+
+            <p class="atb-configuration__info">
+              <span data-tab="cityvan">
+                22
+              </span>
+              <span data-tab="pickup">
+                23
+              </span>
+              <span data-tab="van">
+                24
+              </span>
+              mpg
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="atb-image">
+        <div class="atb-image__wrapper">
+          <img
+            data-tab="cityvan"
+            class="city-van atb-image__item"
+            src="./../assets/img/tabs/city-van.png"
+            alt="City van"
+          />
+
+          <img
+            data-tab="pickup"
+            class="pickup atb-image__item"
+            src="./../assets/img/tabs/pickup.png"
+            alt="pickup"
+          />
+
+          <img
+            data-tab="van"
+            class="van atb-image__item"
+            src="./../assets/img/tabs/van.png"
+            alt="van"
+          />
+        </div>
+
+        <div class="atb-image__title">
+          <span data-tab="cityvan">
+            MINIVAN 5 y.O.
+          </span>
+
+          <span data-tab="pickup">
+            pickup truck 5 y.O.
+          </span>
+
+          <span data-tab="van">van</span>
+        </div>
+      </div>
+      <div class="atb-coverage">
+        <p>SUBSCRIPTION COVERAGE</p>
+        <ul role="list" data-tab="cityvan">
+          <li role="listitem">
+            - Vehicle cityvan
+          </li>
+          <li role="listitem">
+            - Professional Up fit (Rack, Hitch, Toolbox)
+          </li>
+          <li role="listitem">
+            - Proactive Maintenance
+          </li>
+          <li role="listitem">
+            - Your Logo
+          </li>
+          <li role="listitem">
+            - Dedicated moshn service team
+          </li>
+          <li role="listitem">
+            - Mobile Fleet Application
+          </li>
+        </ul>
+
+        <ul role="list" data-tab="pickup">
+          <li role="listitem">
+            - Vehicle pickup
+          </li>
+          <li role="listitem">
+            - Professional Up fit (Rack, Hitch, Toolbox)
+          </li>
+          <li role="listitem">
+            - Proactive Maintenance
+          </li>
+          <li role="listitem">
+            - Your Logo
+          </li>
+          <li role="listitem">
+            - Dedicated moshn service team
+          </li>
+          <li role="listitem">
+            - Mobile Fleet Application
+          </li>
+        </ul>
+
+        <ul role="list" data-tab="van">
+          <li role="listitem">
+            - Vehicle van
+          </li>
+          <li role="listitem">
+            - Professional Up fit (Rack, Hitch, Toolbox)
+          </li>
+          <li role="listitem">
+            - Proactive Maintenance
+          </li>
+          <li role="listitem">
+            - Your Logo
+          </li>
+          <li role="listitem">
+            - Dedicated moshn service team
+          </li>
+          <li role="listitem">
+            - Mobile Fleet Application
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="are-tabs__cost">
+      Subscription plans starting at
+      <span>
+        $550.-
+      </span>
+      Per Month
+    </div>
+  </div>
+</div>
+
+            <!-- end of tabs -->
+
+            <!-- banner with button subscribe -->
+            <div class="banner-button">
+  <div class="banner-button__wrapper">
+    <div class="banner-info">
+      <p class="banner-title__light">
+        KEEP UP TO DATE
+      </p>
+      <p class="banner-title__dark">get on our mailing list</p>
+    </div>
+
+    <img
+      class="banner-button__img"
+      src="./assets/img/banner-img-phone.png"
+      alt="Phone image"
+    />
+
+    <button type="submit" role="button" class="is-btn" data-modal="form">
+      SUBSCRIBE
+    </button>
+  </div>
+</div>
+
+            <!-- end of banner with button subscribe -->
+
+            <!-- description -->
+            <div class="is-description">
+  <div class="banner-title__primary">
+    ONE SUBSCRIPTION - two applications
+  </div>
+
+  <div class="is-container">
+    <div class="is-description__wrapper">
+      <div class="is-description__block">
+        <div class="banner-title__secondary">
+          OWNER
+        </div>
+
+        <ul role="list" class="is-description__list">
+          <li role="listitem">
+            <p>Easy and fast approval <span>(No credit check)</span></p>
+          </li>
+          <li role="listitem">Subscription instead of Purchase</li>
+          <li role="listitem">
+            Sign up for as many vehicles as you need and adjust over time, no
+            down payment required
+          </li>
+          <li role="listitem">
+            Get Fleet management support from dedicated moshn assistants
+          </li>
+          <li role="listitem">
+            Fleet visibility and analytics to help optimize your spend
+          </li>
+          <li role="listitem">
+            Stay safe and ahead of the competition with a modern well maintained
+            fleet
+          </li>
+        </ul>
+      </div>
+
+      <div class="is-description__img-wrapper">
+        <p class="is-description__img-title">owner</p>
+        <img
+          src="./../assets/img/phones.png"
+          class="is-description__img"
+          alt="Phones"
+        />
+        <p class="is-description__img-title">driver</p>
+      </div>
+
+      <div class="is-description__block">
+        <div class="banner-title__secondary">
+          DRIVER
+        </div>
+
+        <ul role="list" class="is-description__list">
+          <li role="listitem">
+            Drive a modern, safe and well maintained vehicle
+          </li>
+          <li role="listitem">Plan ahead with pre-scheduled maintenance</li>
+          <li role="listitem">
+            Let your boss know where you are through the moshn app
+          </li>
+          <li role="listitem">
+            Cool ride when you are "off duty"...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- end of description -->
+
+            <!-- banner with button -->
+            <div class="banner-button">
+  <div class="banner-button__wrapper">
+    <div class="banner-info">
+      <p class="banner-title__light">
+        Get your Fleet on-demand
+      </p>
+      <p class="banner-title__dark">fleet manager in your pocket</p>
+    </div>
+
+    <img
+      class="banner-button__img"
+      src="./assets/img/banner-img-phone.png"
+      alt="Phone image"
+    />
+
+    <button type="submit" role="button" class="is-btn" data-modal="form">
+      SUBSCRIBE
+    </button>
+  </div>
+</div>
+
+            <!-- end of banner with button -->
+
+            <!-- banner with image -->
+            <div class="banner-image">
+  <div class="banner-image__wrapper">
+    <div class="ghost"></div>
+    <div class="banner-info">
+      <p class="banner-title__primary">
+        Stay in moshn with fleet subscription
+      </p>
+      <p class="banner-title__dark">fleet manager in your pocket</p>
+      <button type="button" role="button" class="is-btn" data-modal="form">
+        SUBSCRIBE
+      </button>
+    </div>
+  </div>
+</div>
+
+            <!-- end of banner with image -->
+
+            <!-- carousel -->
+            <div class="is-carousel__wrapper">
+  <div class="banner-title__dark banner-title__mobile">
+    How does it work
+  </div>
+
+  <div id="isCarousel" class="is-carousel">
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/1.png" alt="" />
+      </div>
+
+      <div class="is-carousel__footer">
+        <p>
+          Tell us who you are
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/2.png" alt="" />
+      </div>
+      <div class="is-carousel__footer">
+        <p>
+          Choose your type of <br />
+          business
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/3.png" alt="" />
+      </div>
+
+      <div class="is-carousel__footer">
+        <p>
+          Select a suitable vehicle <br />
+          and up-fit
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/4.png" alt="" />
+      </div>
+
+      <div class="is-carousel__footer">
+        <p>
+          Let us help you with your <br />
+          trade in
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/5.png" alt="" />
+      </div>
+      <div class="is-carousel__footer">
+        <p>
+          Provide payment method
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/6.png" alt="" />
+      </div>
+
+      <div class="is-carousel__footer">
+        <p>
+          Get approved and <br />
+          finalize subscription
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/7.png" alt="" />
+      </div>
+
+      <div class="is-carousel__footer">
+        <p>
+          Enjoy the moshn vehicle <br />
+          and service
+        </p>
+      </div>
+    </div>
+
+    <div class="is-carousel__item">
+      <div class="is-carousel__img">
+        <img src="./../assets/img/carousel/8.png" alt="" />
+      </div>
+      <div class="is-carousel__footer">
+        <p>
+          Upgrade anytime
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="is-carousel__dots">
+    <i class="icon is-icon-arrow-right"> </i>
+  </div>
+</div>
+
+            <!-- end of carousel -->
+
+            <!-- banner with form -->
+            <div class="banner-form">
+  <form action="" class="banner-form__wrapper">
+    <div class="banner-info">
+      <p class="banner-title__light">
+        KEEP UP TO DATE
+      </p>
+      <p class="banner-title__dark">get on our mailing list</p>
+    </div>
+    <div class="input-wrapper">
+      <i class="icon icon-mail"></i>
+      <input
+        type="email"
+        role="input"
+        placeholder="Your email"
+        class="is-input"
+      />
+    </div>
+    <button type="submit" role="button" class="is-btn">
+      Subscribe
+    </button>
+  </form>
+</div>
+
+            <!-- end of banner with form -->
+
+            <!-- footer form -->
+            <div class="is-footer-form" id="contacts">
+  <div class="is-footer-form__wrapper">
+    <div class="is-footer-form__column">
+      <p class="is-footer-form__title">
+        Contact
+      </p>
+
+      <div class="is-footer-form__block">
+        <div class="is-footer-form__contacts">
+          <a href="tel:123qwe" role="link" class="is-footer-form__link"
+            >Phone: 1(650) 407 1407</a
+          >
+
+          <a href="/" role="link" title="MOSHN Main page">
+            <img src="./../assets/img/logo-lg.svg" alt="Logo" />
+          </a>
         </div>
       </div>
     </div>
-    </main>
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/main.js"></script>
+
+    <div class="is-footer-form__column">
+      <p class="is-footer-form__title">
+        About us
+      </p>
+
+      <div class="is-footer-form__block">
+        <ul role="list" class="is-footer-form__menu">
+          <li role="listitem">
+            <a href="#" role="link" class="is-footer-form__link"
+              >moshn de·vo·tion</a
+            >
+          </li>
+          <li role="listitem">
+            <a href="blog.html" role="link" class="is-footer-form__link"
+              >Blog</a
+            >
+          </li>
+          <li role="listitem">
+            <a href="terms.html" role="link" class="is-footer-form__link"
+              >User terms</a
+            >
+          </li>
+          <li role="listitem">
+            <a href="privacy.html" role="link" class="is-footer-form__link"
+              >Privacy</a
+            >
+          </li>
+          <li role="listitem">
+            <a href="faq.html" role="link" class="is-footer-form__link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="is-footer-form__column">
+      <p class="is-footer-form__title">
+        Send us a note
+      </p>
+
+      <div class="is-footer-form__block">
+        <form action="">
+          <input type="text" placeholder="Name" class="is-input__small" />
+          <input
+            type="email"
+            placeholder="Your email"
+            class="is-input__small"
+          />
+          <input
+            type="tel"
+            placeholder="Phone number"
+            class="is-input__small"
+          />
+          <textarea
+            type="text"
+            placeholder="Your message"
+            class="is-input__textarea"
+          ></textarea>
+
+          <button type="submit" role="button" class="is-btn-light">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- end of footer form -->
+
+            <!-- footer -->
+            <footer role="contentinfo" class="is-footer">
+  <div class="is-footer-wrapper">
+    <p class="copyright">
+      moshn mobility inc. 2019 All Rights Reserved
+    </p>
+
+    <ul role="list" class="is-footer__links">
+      <li role="listitem">
+        <a href="terms.html" role="link">Terms & Conditions</a>
+      </li>
+      <li role="listitem">
+        <a href="privacy.html" role="link">Privacy Policy</a>
+      </li>
+    </ul>
+
+    <ul role="list" class="is-footer__socials">
+      <li role="listitem">
+        <a
+          href="https://twitter.com/mobilitymoshn"
+          role="link"
+          title="Twitter"
+          class="is-footer__social"
+          target="_blank"
+        >
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li role="listitem">
+        <a
+          href="https://www.facebook.com/stayinmoshn/"
+          role="link"
+          title="Facebook"
+          class="is-footer__social"
+          target="_blank"
+        >
+          <i class="icon icon-facebook-light"></i>
+        </a>
+      </li>
+      <li role="listitem">
+        <a
+          href="https://www.instagram.com/moshnmobility/"
+          role="link"
+          title="Instagram"
+          class="is-footer__social"
+          target="_blank"
+        >
+          <i class="icon icon-insta"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+            <!-- end of footer -->
+          </div>
+        </div>
+      </div>
+
+      <!-- modal form -->
+      <div class="is-modal-form" id="modalForm">
+  <div class="banner-title__primary">
+    STAY CONNECTED
+  </div>
+
+  <div class="banner-title__dark">
+    Get early view <br />
+    to our launch plans
+  </div>
+  <form action="" class="modal-form__wrapper">
+    <div class="input-wrapper">
+      <i class="icon icon-mail"></i>
+      <input
+        type="email"
+        role="input"
+        placeholder="Your email"
+        class="is-input"
+      />
+    </div>
+    <button type="submit" role="button" class="is-btn">Subscribe</button>
+  </form>
+
+  <img
+    src="./../assets/img/modal-phone.png"
+    alt="phone with screen"
+    class="is-modal-img"
+  />
+</div>
+
+      <!-- end of modal form -->
+
+      <!-- modal contacts -->
+      <div class="is-modal-contacts" id="modalContacts">
+  <div class="banner-title__primary">
+    Send us a note
+  </div>
+
+  <form action="">
+    <input type="text" placeholder="Name" class="is-input__small" />
+    <input type="email" placeholder="Your email" class="is-input__small" />
+    <input type="tel" placeholder="Phone number" class="is-input__small" />
+    <textarea
+      type="text"
+      placeholder="Your message"
+      class="is-input__textarea"
+    ></textarea>
+
+    <button type="submit" role="button" class="is-btn-light">
+      Send
+    </button>
+  </form>
+</div>
+
+      <!-- end of modal contacts -->
+
+      <!-- modal overlay -->
+      <div class="is-modal__overlay" id="modalOverlay"></div>
+
+      <!-- end of modal overlay -->
+
+      <!-- scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"
+></script>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"
+></script>
+
+<script src="./js/main.js"></script>
+
+      <!-- end of scripts -->
+    </div>
   </body>
 </html>
