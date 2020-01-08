@@ -5,29 +5,84 @@
     <meta name="description" content="MOSHN - some description" />
     <meta name="keywords" content="blog, MOSHN, MOSHN, MOSHN" />
     <!-- head -->
-    <meta charset="UTF-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    @@include('components/head.html')
+    <!-- end of head -->
+  </head>
+  <body>
+    <!-- header -->
+    @@include('components/header.html')
+    <!-- end of header -->
 
-<meta property="og:site_name" content="MOSHN site name" />
-<meta name="twitter:card" content="summary" />
-<meta property="og:url" content="https://dev.moshn.ai" />
-<meta name="twitter:url" content="https://dev.moshn.ai" />
-<meta property="og:title" content="MOSHN site title" />
-<meta name="twitter:title" content="MOSHN site title" />
-<meta
-  property="og:description"
-  content="The user trust system is a fundamental cornerstone of Discourse. Trust levels are a way of… Sandboxing new users in your community so that they cannot accidentally hurt themselves, or other users while they are learning what to do. Granting experienced users more rights over time, so that they can help everyone maintain and moderate the community they generously contribute so much of their time to. As documented in Community Building on the Web, there is a natural progression for participants in any community. This [&hellip;]"
-/>
-<meta
-  name="twitter:description"
-  content="The user trust system is a fundamental cornerstone of Discourse. Trust levels are a way of… Sandboxing new users in your community so that they cannot accidentally hurt themselves, or other users while they are learning what to do. Granting experienced users more rights over time, so that they can help everyone maintain and moderate the community they generously contribute so much of their time to. As documented in Community Building on the Web, there is a natural progression for participants in any community. This [&hellip;]"
-/>
+    <!-- main -->
+    <main role="main">
+      <div class="is-404">
+        <div class="is-container-base">
+          <a href="/" role="link" class="single-crumb">
+            <i class="icon icon-arrow-left"></i>
 
-<meta
-  property="og:image"
-  content="https://dev.moshn.ai/assets/img/screen.jpg"
+            Home
+          </a>
+        </div>
+
+        <div class="not-found-wrap">
+          <div class="not-found">
+            <div class="inner-text">
+              <div class="inner-text__title">404</div>
+
+              <div class="inner-text__text">
+                Something went wrong
+                <br />
+                but we are working on it
+              </div>
+            </div>
+
+            <img
+              src="./../assets/img/404.svg"
+              alt="404 page not found"
+              class="img"
+            />
+          </div>
+
+          <span class="deco-line"></span>
+
+          <button
+            type="button"
+            role="link"
+            class="btn is-btn-light"
+            onclick="location.href='/';"
+          >
+            Go back home
+          </button>
+        </div>
+      </div>
+
+      <!-- end of is-404 -->
+    </main>
+
+    <!-- end of main -->
+
+    <!-- footer form -->
+    @@include('components/footer-form.html')
+    <!-- end of footer form -->
+
+    <!-- footer -->
+    @@include('components/footer.html')
+    <!-- end of footer -->
+
+    <!-- modal form -->
+    @@include('components/modal-form.html')
+    <!-- end of modal form -->
+
+    <!-- modal overlay -->
+    @@include('components/modal-overlay.html')
+    <!-- end of modal overlay -->
+
+    <!-- scripts -->
+    @@include('components/scripts.html')
+    <!-- end of scripts -->
+  </body>
+</html>
+sets/img/screen.jpg"
 />
 <meta name="twitter:card" content="summary_large_image" />
 <meta

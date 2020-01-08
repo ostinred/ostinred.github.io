@@ -5,158 +5,12 @@
     <meta name="description" content="MOSHN - some description" />
     <meta name="keywords" content="article, MOSHN, MOSHN, MOSHN" />
     <!-- head -->
-    <meta charset="UTF-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<meta property="og:site_name" content="MOSHN site name" />
-<meta name="twitter:card" content="summary" />
-<meta property="og:url" content="https://dev.moshn.ai" />
-<meta name="twitter:url" content="https://dev.moshn.ai" />
-<meta property="og:title" content="MOSHN site title" />
-<meta name="twitter:title" content="MOSHN site title" />
-<meta
-  property="og:description"
-  content="The user trust system is a fundamental cornerstone of Discourse. Trust levels are a way of… Sandboxing new users in your community so that they cannot accidentally hurt themselves, or other users while they are learning what to do. Granting experienced users more rights over time, so that they can help everyone maintain and moderate the community they generously contribute so much of their time to. As documented in Community Building on the Web, there is a natural progression for participants in any community. This [&hellip;]"
-/>
-<meta
-  name="twitter:description"
-  content="The user trust system is a fundamental cornerstone of Discourse. Trust levels are a way of… Sandboxing new users in your community so that they cannot accidentally hurt themselves, or other users while they are learning what to do. Granting experienced users more rights over time, so that they can help everyone maintain and moderate the community they generously contribute so much of their time to. As documented in Community Building on the Web, there is a natural progression for participants in any community. This [&hellip;]"
-/>
-
-<meta
-  property="og:image"
-  content="https://dev.moshn.ai/assets/img/screen.jpg"
-/>
-<meta name="twitter:card" content="summary_large_image" />
-<meta
-  name="twitter:image"
-  content="https://dev.moshn.ai/assets/img/screen.jpg"
-/>
-<meta property="telegram_channel" content="turbolabit" />
-
-<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="css/app.min.css" />
-
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-/>
-
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"
-/>
-<style>
-  #preloading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #fff;
-  }
-
-  #preloading.is-hidden {
-    opacity: 0;
-    transition: opacity 0.35s 0.2s;
-  }
-
-  #preloading img {
-    width: 200px;
-  }
-</style>
-
+    @@include('components/head.html')
     <!-- end of head -->
   </head>
   <body>
     <!-- header -->
-    <div id="preloading">
-  <img src="./../assets/img/logo-lg.svg" alt="MOSHN logo" />
-</div>
-<header role="header" class="is-header">
-  <div class="is-header__wrapper">
-    <div class="is-header__row">
-      <a href="/" role="link" class="is-logo">
-        <img src="./../assets/img/logo.svg" alt="Logo" />
-      </a>
-
-      <div id="navBtn" class="navigation-btn__wrapper">
-        <button class="navigation-btn">
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <nav role="navigation" class="is-navigation">
-      <ul role="list">
-        <li role="listitem">
-          <a href="about.html" role="link" class="navigation-link"
-            >About MOSHN</a
-          >
-        </li>
-        <li role="listitem">
-          <a href="blog.html" role="link" class="navigation-link">Blog</a>
-        </li>
-        <li role="listitem">
-          <a href="#contacts" role="link" class="navigation-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="is-header__socials">
-      <ul role="list">
-        <li role="listitem">
-          <a
-            href="https://twitter.com/mobilitymoshn"
-            role="link"
-            title="Twitter"
-            class="is-header__social"
-            target="_blank"
-          >
-            <i class="icon icon-twitter"></i>
-          </a>
-        </li>
-        <li role="listitem">
-          <a
-            href="https://www.facebook.com/stayinmoshn/ "
-            role="link"
-            title="Facebook"
-            class="is-header__social"
-            target="_blank"
-          >
-            <i class="icon icon-facebook-light"></i>
-          </a>
-        </li>
-        <li role="listitem">
-          <a
-            href="https://www.instagram.com/moshnmobility/"
-            role="link"
-            title="Instagram"
-            class="is-header__social"
-            target="_blank"
-          >
-            <i class="icon icon-insta"></i>
-          </a>
-        </li>
-      </ul>
-
-      <button role="button" type="button" class="is-btn-lg" data-modal="form">
-        Subscribe
-      </button>
-    </div>
-  </div>
-</header>
-
+    @@include('components/header.html')
     <!-- end of header -->
 
     <div class="is-static__page">
@@ -567,6 +421,103 @@
                   and the parties consent to exclusive jurisdiction and venue in
                   the state and federal courts located in San Francisco,
                   California. All notices under this Agreement shall be in
+                  writing and shall be deemed to have been duly given when
+                  received, if personally delivered or sent by certified or
+                  registered mail, return receipt requested; when receipt is
+                  electronically confirmed, if transmitted by facsimile or
+                  e-mail; or the day after it is sent, if sent for next day
+                  delivery by recognized overnight delivery service. Notices
+                  must be sent to the contacts for each party set forth on the
+                  Order Form. Either party may update its address set forth
+                  above by giving notice in accordance with this section. Except
+                  as otherwise provided herein, no modification or amendment of
+                  any provision of this Agreement shall be effective unless
+                  agreed by both parties in writing, and no waiver of any
+                  provision of this Agreement shall be effective unless in
+                  writing and signed by the waiving party. Except for payment
+                  obligations, neither party shall be liable for any failure to
+                  perform its obligations hereunder where such failure results
+                  from any cause beyond such party’s reasonable control,
+                  including, without limitation, the elements; fire; flood;
+                  severe weather; earthquake; vandalism; accidents; sabotage;
+                  power failure; denial of service attacks or similar attacks;
+                  Internet failure; acts of God and the public enemy; acts of
+                  war; acts of terrorism; riots; civil or public disturbances;
+                  strikes lock-outs or labor disruptions; any laws, orders,
+                  rules, regulations, acts or restraints of any government or
+                  governmental body or authority, civil or military, including
+                  the orders and judgments of courts. Neither party may assign
+                  any of its rights or obligations hereunder without the other
+                  party’s consent; provided that (i) either party may assign all
+                  of its rights and obligations hereunder without such consent
+                  to a successor-in-interest in connection with a sale of
+                  substantially all of such party’s business relating to this
+                  Agreement, and (ii) moshn may utilize subcontractors in the
+                  performance of its obligations hereunder. No agency,
+                  partnership, joint venture, or employment relationship is
+                  created as a result of this Agreement and neither party has
+                  any authority of any kind to bind the other in any respect. In
+                  any action or proceeding to enforce rights under this
+                  Agreement, the prevailing party shall be entitled to recover
+                  costs and attorneys’ fees. If any provision of this Agreement
+                  is held to be unenforceable for any reason, such provision
+                  shall be reformed only to the extent necessary to make it
+                  enforceable. The failure of either party to act with respect
+                  to a breach of this Agreement by the other party shall not
+                  constitute a waiver and shall not limit such party’s rights
+                  with respect to such breach or any subsequent breaches.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="is-page-title">
+            Read other posts
+          </div>
+
+          <div class="post-wrapper">
+            @@include('components/post-link.html')
+            @@include('components/post-link-video.html')
+            @@include('components/post-link.html')
+          </div>
+        </div>
+      </main>
+      <!-- end of main -->
+
+      <!-- banner with button -->
+      @@include('components/banner-button.html')
+      <!-- end of banner with button -->
+
+      <!-- insta -->
+      @@include('components/insta.html')
+      <!-- end of insta -->
+
+      <!-- banner with form -->
+      @@include('components/banner-form.html')
+      <!-- end of banner with form -->
+
+      <!-- footer form -->
+      @@include('components/footer-form.html')
+      <!-- end of footer form -->
+    </div>
+
+    <!-- footer -->
+    @@include('components/footer.html')
+    <!-- end of footer -->
+
+    <!-- modal form -->
+    @@include('components/modal-form.html')
+    <!-- end of modal form -->
+
+    <!-- modal overlay -->
+    @@include('components/modal-overlay.html')
+    <!-- end of modal overlay -->
+
+    <!-- scripts -->
+    @@include('components/scripts.html')
+    <!-- end of scripts -->
+  </body>
+</html>
+Agreement shall be in
                   writing and shall be deemed to have been duly given when
                   received, if personally delivered or sent by certified or
                   registered mail, return receipt requested; when receipt is
