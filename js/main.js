@@ -99,7 +99,7 @@ window.onload = function () {
     for (var _iterator2 = modalFormButton[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
       var modalBtn = _step2.value;
       modalBtn.addEventListener('click', function () {
-        if (window.innerWidth < 766 && body.classList.contains('header-is-opened')) {
+        if (window.innerWidth < 1169 && body.classList.contains('header-is-opened')) {
           body.classList.remove('header-is-opened');
           header.classList.remove('is-open');
         }
