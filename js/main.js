@@ -181,9 +181,21 @@ $(document).ready(function () {
         }
       }
     }, {
+      breakpoint: 765,
+      settings: {
+        autoplaySpeed: 3000,
+        dots: true,
+        slidesToShow: 3,
+        centerMode: true,
+        centerPadding: '10px',
+        customPaging: function customPaging(slider, i) {
+          return '<div class="pager__item" id=' + i + '><span class="pager__item-number">' + Number(i + 1) + '</span><span class="pager__item-dot"></span></div>';
+        }
+      }
+    }, {
       breakpoint: 200,
       settings: {
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         dots: true,
         slidesToShow: 1,
         centerMode: true,
