@@ -132,7 +132,7 @@ window.onload = function () {
     }
   });
 
-  if (window.innerWidth < 1199) {
+  if (window.innerWidth < 1169) {
     navBtn.addEventListener('click', function () {
       header.classList.toggle('is-open');
       body.classList.toggle('header-is-opened');
@@ -277,7 +277,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
 
   if ($('#fullpage').length) {
-    if (window.innerWidth < 766) {
+    if (window.innerWidth < 1169) {
       $('body').removeClass('header-is-opened');
       $('header').removeClass('is-open');
     }
