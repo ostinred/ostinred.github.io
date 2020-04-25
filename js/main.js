@@ -64,6 +64,18 @@ $(document).ready(function () {
     vid[index].pause();
     vid[index].currentTime = 0;
   }
+
+  function mainLinksHover(el, className) {
+    el.hover(function () {
+      $('.is-main').addClass('main-hovered ' + className);
+    }, function () {
+      $('.is-main').removeClass('main-hovered');
+      $('.is-main').removeClass(className);
+    });
+  }
+
+  mainLinksHover($('.main-side__right .main-link'), 'dir-hovered');
+  mainLinksHover($('.main-side__left .main-link'), 'creative-hovered');
 });
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();

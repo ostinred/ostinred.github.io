@@ -75,18 +75,20 @@
       <!-- end of header -->
 
       <!-- main block -->
-      <div class="main-side main-side__left">
-        <a class="main-link" href="#">
-          <img src="./img/arrow-left.svg" />
-          Creative
-        </a>
-      </div>
+      <div class="is-main__wrapper">
+        <div class="main-side main-side__left">
+          <a class="main-link" href="#">
+            <img src="./img/arrow-left.svg" />
+            Creative
+          </a>
+        </div>
 
-      <div class="main-side main-side__right">
-        <a class="main-link" href="#">
-          Director
-          <img src="./img/arrow-right.svg" class="image-scaled" />
-        </a>
+        <div class="main-side main-side__right">
+          <a class="main-link" href="#">
+            Director
+            <img src="./img/arrow-right.svg" class="image-scaled" />
+          </a>
+        </div>
       </div>
 
       <!-- end of main block -->
@@ -316,7 +318,7 @@
           <img src="./img/arrow-left.svg" />
           <span>Creative</span>
         </a>
-        <a href="#" role="link" class="bottom-navigation__link bottom-navigation__link-white">
+        <a href="#" role="link" class="bottom-navigation__link bottom-navigation__director">
           <span>
             Director
           </span>
@@ -326,7 +328,38 @@
     </section>
     <!-- end of homepage -->
 
-    <footer role="contentinfo" class="is-footer"></footer>
+    <footer role="contentinfo" class="is-footer">
+      <div class="is-footer__container">
+        <div class="is-footer__logo">
+          <a href="#" role="link">
+            <img src="./img/footer-logo.svg" alt="AJ logo" />
+          </a>
+        </div>
+
+        <div class="is-footer__info">
+          <div class="is-footer__text">
+            <h3 class="is-footer__info-title">AJ Rivvers</h3>
+            <p>
+              Creative director by day, cinephile by dusk, “athlete” by dawn, husband and father by always.
+            </p>
+            <a class="is-footer__info-link" href="#" role="link">
+              Read more
+              <img src="./img/arrow-right.svg" />
+            </a>
+          </div>
+
+          <div class="is-footer__text">
+            <h3 class="is-footer__info-title">Contact</h3>
+            <p><a href="mailto:aj@creativeish.com" role="link">aj@creativeish.com</a></p>
+
+            <a class="is-footer__info-link" href="#" role="link">
+              Read more
+              <img src="./img/arrow-right.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
