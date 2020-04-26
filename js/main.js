@@ -92,8 +92,43 @@ $(document).ready(function () {
   }
 
   mainLinksHover($('.is-homepage .main-side__right a.main-link'), 'dir-hovered');
-  mainLinksHover($('.is-homepage .main-side__left a.main-link'), 'creative-hovered');
+  mainLinksHover($('.is-homepage .main-side__left a.main-link'), 'creative-hovered'); // catalog page
+
+  var allMods = $('.is-catalog__project'); // Already visible modules
+
+  allMods.each(function (i, el) {
+    var el = $(el);
+
+    if (el.visible(true)) {
+      el.addClass('already-visible');
+    }
+  });
+  $(window).scroll(function (event) {
+    allMods.each(function (i, el) {
+      var el = $(el);
+
+      if (el.visible(true)) {
+        el.addClass('come-in');
+      }
+    });
+  });
 });
+
+(function ($) {
+  $.fn.visible = function (partial) {
+    var $t = $(this),
+        $w = $(window),
+        viewTop = $w.scrollTop(),
+        viewBottom = viewTop + $w.height(),
+        _top = $t.offset().top,
+        _bottom = _top + $t.height(),
+        compareTop = partial === true ? _bottom : _top,
+        compareBottom = partial === true ? _top : _bottom;
+
+    return compareBottom <= viewBottom && compareTop >= viewTop;
+  };
+})(jQuery);
+
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
   $('html, body').animate({
