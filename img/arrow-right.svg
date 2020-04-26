@@ -1,1 +1,20 @@
-<svg width="29" height="34" viewBox="0 0 29 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="path-1" d="M0 0h28.934v33.026H0z"/></defs><g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Director_Hover" transform="translate(-1157 -288)"><g id="Group-3" transform="translate(1156.872 288.25)"><mask id="mask-2" fill="#fff"><use xlink:href="#path-1"/></mask><path d="M22.184 16.513L0 3.827 2.08 0h.05s17.4 9.58 25.44 14.146c1.828 1.038 1.817 3.675-.019 4.7l-25.42 14.18h-.05L.027 29.27l22.156-12.757z" id="Fill-1" fill="#AD8637" mask="url(#mask-2)"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="34px" viewBox="0 0 29 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 6.7e-05 28.93395 6.7e-05 28.93395 33.025707 0 33.025707"></polygon>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Director_Hover" transform="translate(-1157.000000, -288.000000)">
+            <g id="Group-3" transform="translate(1156.871807, 288.250000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M22.183633,16.512887 L-6.7e-05,3.827107 L2.080283,6.7e-05 L2.130533,6.7e-05 C2.130533,6.7e-05 19.530433,9.579057 27.569093,14.145777 C29.397523,15.184277 29.386803,17.821397 27.551003,18.845157 L2.130533,33.025707 L2.080283,33.025707 L0.028073,29.270357 L22.183633,16.512887 Z" id="Fill-1" fill="#AD8637" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

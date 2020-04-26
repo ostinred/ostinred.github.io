@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="./css/app.min.css" />
   </head>
   <body>
-    <div class="is-homepage">
+    <!-- director page -->
+    <div class="is-director__page">
       <!-- header -->
       <header role="header" class="is-header">
         <!-- logo -->
@@ -78,15 +79,13 @@
           <div class="main-side main-side__left">
             <a class="main-link" href="creative.html">
               <img src="./img/arrow-left.svg" />
-              Creative
             </a>
           </div>
 
           <div class="main-side main-side__right">
-            <a class="main-link" href="director.html">
+            <div class="main-link">
               Director
-              <img src="./img/arrow-right.svg" class="image-scaled" />
-            </a>
+            </div>
           </div>
         </div>
 
@@ -95,7 +94,7 @@
 
       <!-- banner -->
       <div class="is-banner with-video-bg">
-        <img class="project-image" src="./img/homepage/project-1.jpg" alt="" />
+        <img class="project-image" src="./img/director/project-1.jpg" alt="" />
         <video class="project-video" loop preload="metadata" muted>
           <source src="./video/1.mp4" type="video/mp4" />
         </video>
@@ -104,15 +103,15 @@
           <img class="is-logo__icon" src="./img/logo-icon.svg" alt="AJ Rivvers logo icon" />
           <div class="is-banner__line"></div>
           <div class="project-text">
-            <h3 class="project-heading">Drone Light Show at the Winter Olympics</h3>
-            <p class="project-company">Intel</p>
+            <h3 class="project-heading">Playing With Fire</h3>
+            <p class="project-company">GOOGLE x E. ROSE</p>
           </div>
         </div>
       </div>
       <!-- end of banner -->
 
       <!-- zebra text -->
-      <div class="is-zebra">
+      <div class="is-zebra is-zebra__bg-black">
         <div class="is-zebra__lines">
           <div class="zebra-line zebra-l1"></div>
           <div class="zebra-line zebra-l2"></div>
@@ -126,66 +125,52 @@
         <div class="is-zebra__wrapper">
           <div class="is-zebra__text">
             <h2 role="heading">
-              Playing at the intersection of entertainment and technology. Working to narrow the gap between thinking
-              and making.
+              Creator of conceptual stories that surprise, inspire, and find humanity in otherwise disconnected moments.
             </h2>
           </div>
         </div>
       </div>
       <!-- end of zebra text -->
 
-      <div class="is-container">
-        <!-- project -->
-        <a class="is-project" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-2.jpg" />
+      <!-- banner -->
+      <div class="is-banner with-video-bg">
+        <img class="project-image" src="./img/director/project-2.jpg" alt="" />
+        <video class="project-video" loop preload="metadata" muted>
+          <source src="./video/1.mp4" type="video/mp4" />
+        </video>
 
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
+        <div class="is-banner__copies">
+          <img class="is-logo__icon" src="./img/logo-icon.svg" alt="AJ Rivvers logo icon" />
+          <div class="is-banner__line"></div>
           <div class="project-text">
-            <h3 class="project-heading">Cinema Takeover</h3>
-            <p class="project-company">OCULUS</p>
+            <h3 class="project-heading">
+              Courtside From
+              <br />
+              Anywhere
+            </h3>
+            <p class="project-company">INTEL x TNT</p>
           </div>
-        </a>
-        <!-- end of project -->
-
-        <!-- project -->
-        <a class="is-project is-project__small right-aligned" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-3.jpg" />
-
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="project-text">
-            <h3 class="project-heading">Pinny ARcade</h3>
-            <p class="project-company">OCULUS</p>
-          </div>
-        </a>
-        <!-- end of project -->
-
-        <!-- project -->
-        <a class="is-project is-project__large" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-4.jpg" />
-
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="project-text">
-            <h3 class="project-heading">The World is Watching</h3>
-            <p class="project-company">INTEL</p>
-          </div>
-        </a>
-        <!-- end of project -->
+        </div>
       </div>
+      <!-- end of banner -->
+
+      <!-- banner -->
+      <div class="is-banner with-video-bg">
+        <img class="project-image" src="./img/director/project-3.jpg" alt="" />
+        <video class="project-video" loop preload="metadata" muted>
+          <source src="./video/1.mp4" type="video/mp4" />
+        </video>
+
+        <div class="is-banner__copies">
+          <img class="is-logo__icon" src="./img/logo-icon.svg" alt="AJ Rivvers logo icon" />
+          <div class="is-banner__line"></div>
+          <div class="project-text">
+            <h3 class="project-heading">Photography</h3>
+            <p class="project-company">LIFESTYLE & PRODUCT</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of banner -->
 
       <!-- zebra text -->
       <div class="is-zebra is-zebra__bg-black is-zebra__cite is-zebra__text-left">
@@ -202,59 +187,23 @@
         <div class="is-zebra__wrapper">
           <div class="is-zebra__text">
             <h2 role="heading">
-              AJ is brilliant at making a strategic insight come alive through beautiful storytelling and experience
-              design. He’s one of the best conceptual minds I’ve ever worked with.
+              AJ is a breath of fresh air. He’s a whirlwind of energy & passion who stokes the creative fires and makes
+              you want to lift your game.
             </h2>
 
             <p class="project-company">
-              Jamie Ehrhart,
+              Gavin McLeod,
               <br />
-              Director of Global Brand Marketing, Slack
+              Executive Creative Director, Ogilvy Sydney
             </p>
           </div>
         </div>
       </div>
       <!-- end of zebra text -->
 
-      <div class="is-container">
-        <!-- project -->
-        <a class="is-project is-project__medium right-aligned" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-5.jpg" />
-
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="project-text">
-            <h3 class="project-heading">Quest Launch</h3>
-            <p class="project-company">OCULUS</p>
-          </div>
-        </a>
-        <!-- end of project -->
-
-        <!-- project -->
-        <a class="is-project is-project__small" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-6.jpg" />
-
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="project-text">
-            <h3 class="project-heading">True View x NFL</h3>
-            <p class="project-company">INTEL</p>
-          </div>
-        </a>
-        <!-- end of project -->
-      </div>
-
       <!-- banner -->
       <div class="is-banner with-video-bg">
-        <img class="project-image" src="./img/homepage/project-7.jpg" alt="" />
+        <img class="project-image" src="./img/director/project-4.jpg" alt="" />
         <video class="project-video" loop preload="metadata" muted>
           <source src="./video/1.mp4" type="video/mp4" />
         </video>
@@ -263,67 +212,39 @@
           <img class="is-logo__icon" src="./img/logo-icon.svg" alt="AJ Rivvers logo icon" />
           <div class="is-banner__line"></div>
           <div class="project-text">
-            <h3 class="project-heading">
-              Rainy Days
-              <br />
-              Music Video
-            </h3>
-            <p class="project-company">INTEL X CHRIS LEE</p>
+            <h3 class="project-heading">Filmojis</h3>
+            <p class="project-company">self</p>
           </div>
         </div>
       </div>
       <!-- end of banner -->
 
-      <div class="is-container">
-        <!-- project -->
-        <a class="is-project" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-8.jpg" />
+      <!-- banner -->
+      <div class="is-banner with-video-bg">
+        <img class="project-image" src="./img/director/project-5.jpg" alt="" />
+        <video class="project-video" loop preload="metadata" muted>
+          <source src="./video/1.mp4" type="video/mp4" />
+        </video>
 
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
+        <div class="is-banner__copies">
+          <img class="is-logo__icon" src="./img/logo-icon.svg" alt="AJ Rivvers logo icon" />
+          <div class="is-banner__line"></div>
           <div class="project-text">
-            <h3 class="project-heading">EP Headphones</h3>
-            <p class="project-company">beats by dre</p>
+            <h3 class="project-heading">Ups And Downs</h3>
+            <p class="project-company">TEDx SYDNEY</p>
           </div>
-        </a>
-        <!-- end of project -->
-
-        <!-- project -->
-        <a class="is-project is-project__large right-aligned" role="link" href="#">
-          <div class="is-project-media with-video-bg">
-            <img class="project-image" src="./img/homepage/project-9.jpg" />
-
-            <video class="project-video" loop preload="metadata" muted>
-              <source src="./video/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="project-text">
-            <h3 class="project-heading">Video Voyeur</h3>
-            <p class="project-company">YOUTUBE</p>
-          </div>
-        </a>
-        <!-- end of project -->
+        </div>
       </div>
+      <!-- end of banner -->
 
-      <div class="bottom-navigation">
-        <a href="creative.html" role="link" class="bottom-navigation__link">
+      <div class="bottom-navigation bottom-navigation__director">
+        <a href="index.html" role="link" class="bottom-navigation__link">
           <img src="./img/arrow-left.svg" />
-          <span>Creative</span>
-        </a>
-        <a href="director.html" role="link" class="bottom-navigation__link bottom-navigation__director">
-          <span>
-            Director
-          </span>
-          <img src="./img/arrow-right.svg" />
+          <span>Creative director</span>
         </a>
       </div>
 
-      <footer role="contentinfo" class="is-footer">
+      <footer role="contentinfo" class="is-footer is-footer__black">
         <div class="is-footer__container">
           <div class="is-footer__logo">
             <a href="index.html" role="link">
@@ -356,6 +277,9 @@
         </div>
       </footer>
     </div>
+
+    <!-- end of director page -->
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

@@ -1,1 +1,13 @@
-<svg width="48" height="46" viewBox="0 0 48 46" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M0 45.823h33.24L9.609 29.181z"/><g transform="translate(15 .109)"><path d="M31.009 34.33L11.29.177.755 18.427 24.579 45.71c5.758-.104 9.327-6.362 6.43-11.38" id="Fill-2"/></g></g></svg>
+<svg width="48px" height="46px" viewBox="0 0 48 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-23.000000, -17.000000)" fill="#000000">
+            <g transform="translate(23.000000, 17.000000)">
+                <polygon points="0 45.8231429 33.2405714 45.8231429 9.608 29.1814286"></polygon>
+                <g transform="translate(15.000000, 0.108857)">
+                    <path d="M31.0089143,34.3300857 L11.2906286,0.176942857 L0.754628571,18.4260857 L24.5789143,45.7095143 C30.3366286,45.6060857 33.9057714,39.3478 31.0089143,34.3300857" id="Fill-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
