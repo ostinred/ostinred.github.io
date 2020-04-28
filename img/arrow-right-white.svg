@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="34px" viewBox="0 0 29 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 6.7e-05 28.93395 6.7e-05 28.93395 33.025707 0 33.025707"></polygon>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Director_Hover" transform="translate(-1157.000000, -288.000000)">
+            <g id="Group-3" transform="translate(1156.871807, 288.250000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M22.183633,16.512887 L-6.7e-05,3.827107 L2.080283,6.7e-05 L2.130533,6.7e-05 C2.130533,6.7e-05 19.530433,9.579057 27.569093,14.145777 C29.397523,15.184277 29.386803,17.821397 27.551003,18.845157 L2.130533,33.025707 L2.080283,33.025707 L0.028073,29.270357 L22.183633,16.512887 Z" id="Fill-1" fill="#fff" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
