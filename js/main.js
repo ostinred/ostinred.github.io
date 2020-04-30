@@ -1,8 +1,8 @@
 "use strict";
 
 $(document).ready(function () {
-  var $body = $('body');
   var $header = $('.is-header');
+  var $body = $('body');
   var $navBtn = $('#navBtn');
   var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
   var isChrome = /Chrome/i.test(navigator.userAgent);
@@ -94,24 +94,35 @@ $(document).ready(function () {
   mainLinksHover($('.is-homepage .main-side__right a.main-link'), 'dir-hovered');
   mainLinksHover($('.is-homepage .main-side__left a.main-link'), 'creative-hovered'); // catalog page
 
-  var allMods = $('.is-catalog__project'); // Already visible modules
-
-  allMods.each(function (i, el) {
-    var el = $(el);
-
-    if (el.visible(true)) {
-      el.addClass('already-visible');
-    }
+  var catalogProjects = $('.is-catalog__project');
+  var zebras = $('.is-zebra');
+  $(window).scroll(function () {
+    inViewport(zebras);
+    inViewport(catalogProjects);
   });
-  $(window).scroll(function (event) {
-    allMods.each(function (i, el) {
-      var el = $(el);
+  $(window).resize(function () {
+    inViewport(zebras);
+    inViewport(catalogProjects);
+  });
+  inViewport(zebras);
+  inViewport(catalogProjects);
 
-      if (el.visible(true)) {
-        el.addClass('come-in');
+  function inViewport(el) {
+    el.each(function () {
+      var divPos = $(this).offset().top,
+          topOfWindow = $(window).scrollTop();
+
+      if (window.innerWidth < 750) {
+        if (divPos < topOfWindow + window.innerHeight - 100) {
+          $(this).addClass('is-visible');
+        }
+      } else {
+        if (divPos < topOfWindow + window.innerHeight - 150) {
+          $(this).addClass('is-visible');
+        }
       }
     });
-  });
+  }
 
   function expandText() {
     if ($('.is-about__description > *').length <= 2) {
@@ -139,22 +150,6 @@ $(document).ready(function () {
 
   expandText();
 });
-
-(function ($) {
-  $.fn.visible = function (partial) {
-    var $t = $(this),
-        $w = $(window),
-        viewTop = $w.scrollTop(),
-        viewBottom = viewTop + $w.height(),
-        _top = $t.offset().top,
-        _bottom = _top + $t.height(),
-        compareTop = partial === true ? _bottom : _top,
-        compareBottom = partial === true ? _top : _bottom;
-
-    return compareBottom <= viewBottom && compareTop >= viewTop;
-  };
-})(jQuery);
-
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
   $('html, body').animate({
