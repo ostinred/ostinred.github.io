@@ -149,6 +149,53 @@ $(document).ready(function () {
   }
 
   expandText();
+  var postImages = $('.is-post__image');
+  postImages.click(function () {
+    $(this).addClass('is-active');
+    $(body).addClass('overflow-hidden');
+  });
+  var postImageGallery = $('.is-post__image-copied');
+  postImageGallery.click(function (e) {
+    e.stopPropagation();
+
+    var _this = $(this).parent('.is-active');
+
+    _this.removeClass('is-active');
+
+    $(body).removeClass('overflow-hidden');
+  }); // cursor
+
+  var cursor = $('.is-cursor');
+
+  function moveCursor(e) {
+    var x = e.clientX - 16;
+    var y = e.clientY - 16;
+    cursor.css('transform', 'translate(' + x + 'px,' + y + 'px)');
+  }
+
+  if (cursor) {
+    $(document).mousemove(function (e) {
+      moveCursor(e);
+    });
+  } // video
+
+
+  var videoModal = $('.is-block__video');
+  var videoIframe = $('.is-block__video iframe');
+  videoModal.click(function () {
+    $(this).addClass('is-active');
+    $(body).addClass('overflow-hidden');
+  });
+  var videoOverlay = $('.is-block__video-overlay');
+  videoOverlay.click(function (e) {
+    e.stopPropagation();
+    videoModal.removeClass('is-active');
+    $(body).removeClass('overflow-hidden');
+    videoIframe.each(function () {
+      var el_src = $(this).attr('src');
+      $(this).attr('src', el_src);
+    });
+  });
 });
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
