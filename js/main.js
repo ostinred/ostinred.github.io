@@ -4,9 +4,6 @@ $(document).ready(function () {
   var $header = $('.is-header');
   var $body = $('body');
   var $navBtn = $('#navBtn');
-  var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-  var isChrome = /Chrome/i.test(navigator.userAgent);
-  var mq = $(window).width() < 1023;
   var $main = $('.is-main'); // change logo colors
 
   if ($(document).scrollTop() > $main.height() - $header.height()) {
@@ -19,17 +16,7 @@ $(document).ready(function () {
     } else {
       $header.removeClass('is-scrolled');
     }
-  });
-
-  function closeNavigation() {
-    $header.removeClass('is-active');
-    $body.removeClass('is-nav-opened');
-    clearTimeout(s);
-    var s = setTimeout(function () {
-      $header.removeClass('is-closing');
-    }, 1000);
-  } // open navigation
-
+  }); // navigation
 
   $navBtn.click(function () {
     if ($header.hasClass('is-closing') && !$header.hasClass('is-active')) {
@@ -46,21 +33,17 @@ $(document).ready(function () {
   });
   $('.navigation-link__footer').click(function () {
     closeNavigation();
-  }); // function detectBrowser() {
-  //   if (isSafari) {
-  //     $body.addClass('isIos');
-  //   } else if (isChrome && mq) {
-  //     $body.addClass('isChrome');
-  //   }
-  // }
-  // detectBrowser();
-  // function fullHeightBanner() {
-  //   if ($body.hasClass('isChrome')) {
-  //     $main.css({ height: window.innerHeight });
-  //   }
-  // }
-  // fullHeightBanner();
-  // video playing on hover
+  });
+
+  function closeNavigation() {
+    $header.removeClass('is-active');
+    $body.removeClass('is-nav-opened');
+    clearTimeout(s);
+    var s = setTimeout(function () {
+      $header.removeClass('is-closing');
+    }, 1000);
+  } // video playing on hover
+
 
   var figure = $('.with-video-bg ');
   var vid = figure.find('video');
@@ -79,7 +62,7 @@ $(document).ready(function () {
   function hideVideo(index, e) {
     vid[index].pause();
     vid[index].currentTime = 0;
-  } // hover main links
+  } // hover homepage main links
 
 
   function mainLinksHover(el, className) {
@@ -92,7 +75,7 @@ $(document).ready(function () {
   }
 
   mainLinksHover($('.is-homepage .main-side__right a.main-link'), 'dir-hovered');
-  mainLinksHover($('.is-homepage .main-side__left a.main-link'), 'creative-hovered'); // catalog page
+  mainLinksHover($('.is-homepage .main-side__left a.main-link'), 'creative-hovered'); // animations in viewport
 
   var catalogProjects = $('.is-catalog__project');
   var zebras = $('.is-zebra');
@@ -122,40 +105,44 @@ $(document).ready(function () {
         }
       }
     });
-  }
+  } // expand text
+
+
+  var aboutTextDescription = $('.is-block__expanded-description');
+  var aboutExpandToggler = $('.is-block__expanded-toggler');
 
   function expandText() {
-    if ($('.is-about__description > *').length <= 2) {
-      $('.about-expand-toggler').hide();
+    if ($('.is-block__expanded-description > *').length <= 1) {
+      aboutExpandToggler.hide();
     } else {
-      var aboutFirstHeight = $('.is-about__description p:nth-child(1)').outerHeight();
-      var aboutSecondHeight = $('.is-about__description p:nth-child(2)').outerHeight();
-      var aboutExpandedHeight = aboutFirstHeight + aboutSecondHeight;
-      $('.is-about__description').css('maxHeight', aboutExpandedHeight);
+      var aboutFirstHeight = $('.is-block__expanded-description p:nth-child(1)').outerHeight();
+      var aboutExpandedHeight = aboutFirstHeight;
+      aboutTextDescription.css('maxHeight', aboutExpandedHeight);
       var totalHeight = 0;
-      $('.is-about__description').children().each(function () {
+      aboutTextDescription.children().each(function () {
         totalHeight = totalHeight + $(this).outerHeight(true);
       });
-      $('.about-expand-toggler').click(function () {
-        if ($('.is-about__description').hasClass('is-expanded')) {
-          $('.is-about__description').css('maxHeight', aboutExpandedHeight);
+      aboutExpandToggler.click(function () {
+        if (aboutTextDescription.hasClass('is-expanded')) {
+          aboutTextDescription.css('maxHeight', aboutExpandedHeight);
         } else {
-          $('.is-about__description').css('maxHeight', totalHeight);
+          aboutTextDescription.css('maxHeight', totalHeight);
         }
 
-        $('.is-about__description').toggleClass('is-expanded');
+        aboutTextDescription.toggleClass('is-expanded');
       });
     }
   }
 
-  expandText();
-  var postImages = $('.is-post__image');
-  postImages.click(function () {
+  expandText(); // gallery view of images in post page
+
+  var blockImages = $('.is-block__image');
+  blockImages.click(function () {
     $(this).addClass('is-active');
     $(body).addClass('overflow-hidden');
   });
-  var postImageGallery = $('.is-post__image-copied');
-  postImageGallery.click(function (e) {
+  var blockImageGallery = $('.is-block__image-copied');
+  blockImageGallery.click(function (e) {
     e.stopPropagation();
 
     var _this = $(this).parent('.is-active');
@@ -170,14 +157,28 @@ $(document).ready(function () {
   function moveCursor(e) {
     var x = e.clientX - 16;
     var y = e.clientY - 16;
-    cursor.css('transform', 'translate(' + x + 'px,' + y + 'px)');
+    cursor.css({
+      top: '' + y + 'px',
+      left: '' + x + 'px'
+    });
+  }
+
+  function pointerStyles(el) {
+    el.hover(function () {
+      cursor.addClass('pointer');
+    }, function () {
+      cursor.removeClass('pointer');
+    });
   }
 
   if (cursor) {
     $(document).mousemove(function (e) {
       moveCursor(e);
+      pointerStyles($('a'));
+      pointerStyles($('button'));
+      pointerStyles($('.is-block__video'));
     });
-  } // video
+  } // video in modal
 
 
   var videoModal = $('.is-block__video');
@@ -196,13 +197,15 @@ $(document).ready(function () {
       $(this).attr('src', el_src);
     });
   });
-});
+}); // smooth scrolling to anchors
+
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
   $('html, body').animate({
     scrollTop: $($.attr(this, 'href')).offset().top
   }, 1500);
-});
+}); // prevent instantaneous hover
+
 var body = document.body;
 var timer;
 window.addEventListener('scroll', function () {
