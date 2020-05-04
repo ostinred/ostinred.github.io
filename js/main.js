@@ -134,7 +134,13 @@ $(document).ready(function () {
     }
   }
 
-  expandText(); // gallery view of images in post page
+  expandText(); // expand credits
+
+  var creditWrapper = $('.is-credit');
+  var creditToggler = $('.is-credit__toggler');
+  creditToggler.click(function () {
+    creditWrapper.toggleClass('is-expanded');
+  }); // gallery view of images in post page
 
   var blockImages = $('.is-block__image');
   blockImages.click(function () {
@@ -196,6 +202,15 @@ $(document).ready(function () {
       var el_src = $(this).attr('src');
       $(this).attr('src', el_src);
     });
+  }); // carousel
+
+  $('.is-slider').slick({
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    prevArrow: $('.slider-prev'),
+    nextArrow: $('.slider-next')
   });
 }); // smooth scrolling to anchors
 
