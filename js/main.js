@@ -211,7 +211,9 @@ $(document).ready(function () {
     autoplaySpeed: 4000,
     prevArrow: $('.slider-prev'),
     nextArrow: $('.slider-next')
-  });
+  }); // add coyright year
+
+  $('.is-copyright span').text(new Date().getFullYear());
 }); // smooth scrolling to anchors
 
 $(document).on('click', 'a[href^="#"]', function (event) {
