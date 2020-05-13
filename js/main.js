@@ -1,5 +1,9 @@
 "use strict";
 
+var tablet;
+var laptop;
+tablet = 767;
+laptop = 1140;
 $(document).ready(function () {
   var $header = $('.is-header');
   var $body = $('body');
@@ -83,19 +87,13 @@ $(document).ready(function () {
       var divPos = $(this).offset().top,
           topOfWindow = $(window).scrollTop();
 
-      if (window.innerWidth < 750) {
-        if (divPos < topOfWindow + window.innerHeight - 100) {
-          $(this).addClass('is-visible');
-        }
-      } else {
-        if (divPos < topOfWindow + window.innerHeight - 150) {
+      if (window.innerWidth > tablet) {
+        if (divPos < topOfWindow + window.innerHeight + 50) {
           $(this).addClass('is-visible');
         }
       }
 
-      if (topOfWindow < window.innerHeight / 2) {
-        $('div').removeClass('is-visible');
-      }
+      return;
     });
   } // expand text
 
@@ -148,33 +146,7 @@ $(document).ready(function () {
     _this.removeClass('is-active');
 
     $(body).removeClass('overflow-hidden');
-  }); // cursor
-  // var cursor = $('.is-cursor');
-  // function moveCursor(e) {
-  //   var x = e.clientX - 16;
-  //   var y = e.clientY - 16;
-  //   cursor.css({ top: '' + y + 'px', left: '' + x + 'px' });
-  // }
-  // function pointerStyles(el) {
-  //   el.hover(
-  //     function () {
-  //       cursor.addClass('pointer');
-  //     },
-  //     function () {
-  //       cursor.removeClass('pointer');
-  //     }
-  //   );
-  // }
-  // if (cursor.length && window.innerWidth > 1200) {
-  //   $(document).mousemove(function (e) {
-  //     moveCursor(e);
-  //     pointerStyles($('a'));
-  //     pointerStyles($('button'));
-  //     pointerStyles($('.is-block__video'));
-  //     pointerStyles($('.main-link'));
-  //   });
-  // }
-  // video in modal
+  }); // video in modal
 
   var videoModal = $('.is-block__video');
   var videoIframe = $('.is-block__video iframe');
@@ -252,6 +224,16 @@ $(document).ready(function () {
   var logoName = $('.is-logo__name');
   var url = window.location.href;
 
+  if (window.innerWidth >= laptop) {
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > $(window).height() / 2) {
+        $('.is-mainpage__content').addClass('unblocked');
+      } else {
+        $('.is-mainpage__content').removeClass('unblocked');
+      }
+    });
+  }
+
   if (mainPage.length) {
     creativeLink.click(function () {
       mainPage.removeClass('is-homepage-from-creative');
@@ -318,7 +300,7 @@ var timer;
 window.addEventListener('scroll', function () {
   clearTimeout(timer);
 
-  if (window.innerWidth >= 1100 && !body.classList.contains('disable-hover')) {
+  if (window.innerWidth >= laptop && !body.classList.contains('disable-hover')) {
     body.classList.add('disable-hover');
   }
 
