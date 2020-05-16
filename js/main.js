@@ -263,27 +263,26 @@ $(document).ready(function () {
     });
     directorLink.click(function () {
       mainPage.addClass('is-director__page');
-      mainPage.removeClass('is-homepage-from-creative'); // window.location.href += '#director';
+      mainPage.removeClass('is-homepage-from-creative'); // // window.location.href += '#director';
 
-      logoName.addClass('is-hidden');
+      logoName.addClass('without-opacity');
       mainPage.addClass('is-animating');
       clearTimeout(d);
       var d = setTimeout(function () {
         mainPage.removeClass('is-animating');
-      }, 1500);
+      }, 1600);
     });
-    homepageLinkFromDirector.click(function () {
-      mainPage.removeClass('is-director__page');
-      mainPage.addClass('is-homepage-from-director');
-      mainPage.addClass('is-animating');
-      clearTimeout(dh1);
-      var dh1 = setTimeout(function () {
-        mainPage.removeClass('is-animating');
-      }, 1500);
-      clearTimeout(dh2);
-      var dh2 = setTimeout(function () {
-        mainPage.removeClass('is-homepage-from-director');
-      }, 1750);
+    homepageLinkFromDirector.click(function () {// mainPage.removeClass('is-director__page');
+      // mainPage.addClass('is-homepage-from-director');
+      // mainPage.addClass('is-animating');
+      // clearTimeout(dh1);
+      // var dh1 = setTimeout(function () {
+      //   mainPage.removeClass('is-animating');
+      // }, 1500);
+      // clearTimeout(dh2);
+      // var dh2 = setTimeout(function () {
+      //   mainPage.removeClass('is-homepage-from-director');
+      // }, 1750);
     });
   }
 }); // smooth scrolling to anchors
