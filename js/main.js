@@ -240,7 +240,6 @@ $(document).ready(function () {
   mainLinksHover(homepageLinkFromCreative, 'dir-hovered');
   mainLinksHover(homepageLinkFromDirector, 'creative-hovered');
   var logoName = $('.is-logo__name');
-  var url = window.location.href;
 
   if (window.innerWidth >= laptop) {
     $(window).scroll(function () {
@@ -252,8 +251,6 @@ $(document).ready(function () {
     });
   }
 
-  console.log('footer', footer);
-
   if (mainPage.length) {
     footer.addClass('is-translated');
     creativeLink.click(function () {
@@ -261,10 +258,7 @@ $(document).ready(function () {
       mainPage.addClass('is-creative__page');
       logoName.addClass('is-hidden');
       mainPage.addClass('is-animating');
-      footer.addClass('is-footer__white'); // if (!window.location.href.includes('#creative')) {
-      //   window.location.href += '#creative';
-      // }
-
+      footer.addClass('is-footer__white');
       clearTimeout(c);
       var c = setTimeout(function () {
         mainPage.removeClass('is-animating');
@@ -286,8 +280,7 @@ $(document).ready(function () {
     });
     directorLink.click(function () {
       mainPage.addClass('is-director__page');
-      mainPage.removeClass('is-homepage-from-creative'); // // window.location.href += '#director';
-
+      mainPage.removeClass('is-homepage-from-creative');
       logoName.addClass('without-opacity');
       mainPage.addClass('is-animating');
       footer.addClass('is-footer__black');
