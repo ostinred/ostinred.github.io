@@ -1,1 +1,37 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.1da90fd9.js"></script><link href="/static/css/main.493774c4.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pursuit</title>
+    <style>
+      body {
+        height: calc(100vh - 100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:  Arial, sans-serif;
+        overflow: hidden; 
+      }
+      h1 {
+        font-size: 30vw;
+        margin: 0;
+        line-height: 1;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1"/>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+  <script>
+    var DateTime = luxon.DateTime;
+
+    const now = luxon.DateTime.now();
+    const finish = luxon.DateTime.fromISO('2025-06-19T10:00');
+    const { days } = finish.diff(now, 'days');
+    const heading = document.getElementById('h1');
+    heading.innerText = Math.ceil(days);
+  </script>
+</html>
