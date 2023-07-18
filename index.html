@@ -59,19 +59,24 @@
     var DateTime = luxon.DateTime;
 
     const now = luxon.DateTime.now();
+    const autumn2023 = luxon.DateTime.fromISO('2023-09-13T00:01');
     const finish = luxon.DateTime.fromISO('2025-06-19T00:01');
 
     const { days } = finish.diff(now, 'days');
-    const { weeks } = finish.diff(now, 'weeks');
-    const { months } = finish.diff(now, 'months');
+    const {days: daysAutumn2023 } = autumn2023.diff(now, 'days');
+    // const { weeks } = finish.diff(now, 'weeks');
+    // const { months } = finish.diff(now, 'months');
 
     const h1 = document.getElementById('h1');
     h1.innerHTML = Math.ceil(days);
 
+    // const h2 = document.getElementById('h2');
+    // h2.innerHTML = Math.floor(weeks);
+    
     const h2 = document.getElementById('h2');
-    h2.innerHTML = Math.floor(weeks);
+    h2.innerHTML = Math.floor(daysAutumn2023);
 
-    const h3 = document.getElementById('h3');
-    h3.innerHTML = Math.floor(months);
+    // const h3 = document.getElementById('h3');
+    // h3.innerHTML = Math.floor(months);
   </script>
 </html>
