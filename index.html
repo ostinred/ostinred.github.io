@@ -12,9 +12,20 @@
         justify-content: center;
         font-family: Arial, sans-serif;
         overflow: hidden;
+        flex-direction: column;
       }
       h1 {
-        font-size: 30vw;
+        font-size: 40vw;
+        margin: 25px 0 0 0;
+        line-height: 1;
+      }
+      h2 {
+        font-size: 25vw;
+        margin: 25px 0 0 0;
+        line-height: 1;
+      }
+      h3 {
+        font-size: 15vw;
         margin: 25px 0 0 0;
         line-height: 1;
       }
@@ -23,23 +34,44 @@
         body {
           height: 100vh;
         }
-        h1 {
+        h1, h2, h3 {
           margin: 0;
+        }
+        h1 {
+          font-size: 20vw;
+        }
+        h2 {
+          font-size: 15vw;
+        }
+        h3 {
+          font-size: 10vw;
         }
       }
     </style>
   </head>
   <body>
     <h1 id="h1" />
+    <h2 id="h2" />
+    <h3 id="h3" />
   </body>
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
   <script>
     var DateTime = luxon.DateTime;
 
     const now = luxon.DateTime.now();
-    const finish = luxon.DateTime.fromISO('2025-06-19T10:00');
+    const finish = luxon.DateTime.fromISO('2025-06-19T00:01');
+
     const { days } = finish.diff(now, 'days');
-    const heading = document.getElementById('h1');
-    heading.innerText = Math.ceil(days);
+    const { weeks } = finish.diff(now, 'weeks');
+    const { months } = finish.diff(now, 'months');
+
+    const h1 = document.getElementById('h1');
+    h1.innerHTML = Math.ceil(days);
+
+    const h2 = document.getElementById('h2');
+    h2.innerHTML = Math.floor(weeks);
+
+    const h3 = document.getElementById('h3');
+    h3.innerHTML = Math.floor(months);
   </script>
 </html>
