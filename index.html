@@ -30,6 +30,17 @@
         line-height: 1;
       }
 
+      .row {
+          display: flex;
+          align-items: center;
+        }
+        .row p {
+          line-height: 1;
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+        }
+
       @media screen and (min-width: 1024px) {
         body {
           height: 100vh;
@@ -50,7 +61,10 @@
     </style>
   </head>
   <body>
-    <h1 id="h1" />
+    <div class="row">
+      <p id="p" />
+      <h1 id="h1" />
+    </div>
     <h2 id="h2" />
     <h3 id="h3" />
   </body>
@@ -58,14 +72,18 @@
   <script>
     var DateTime = luxon.DateTime;
 
+    const start = luxon.DateTime.fromISO('2023-06-17T21:00');
     const now = luxon.DateTime.now();
     const autumn2023 = luxon.DateTime.fromISO('2023-09-13T00:01');
     const finish = luxon.DateTime.fromISO('2025-06-19T00:01');
 
     const { days } = finish.diff(now, 'days');
     const {days: daysAutumn2023 } = autumn2023.diff(now, 'days');
+    const {days: hasBeen } = now.diff(start, 'days');
     // const { weeks } = finish.diff(now, 'weeks');
     // const { months } = finish.diff(now, 'months');
+
+    console.log('hasBeen', hasBeen);
 
     const h1 = document.getElementById('h1');
     h1.innerHTML = Math.ceil(days);
@@ -75,6 +93,11 @@
     
     const h2 = document.getElementById('h2');
     h2.innerHTML = Math.ceil(daysAutumn2023);
+
+    const p = document.getElementById('p');
+    p.innerHTML = Math.ceil(hasBeen);
+
+
 
     // const h3 = document.getElementById('h3');
     // h3.innerHTML = Math.floor(months);
