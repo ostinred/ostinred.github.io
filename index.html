@@ -31,19 +31,20 @@
       }
 
       .row {
-          display: flex;
-          align-items: center;
-        }
-        .row p {
-          line-height: 1;
-    font-size: 3vw;
-    margin: 0;
-    padding: 0;
-        }
+        display: flex;
+        align-items: center;
+      }
+
+      .row p {
+        line-height: 1;
+        font-size: 3vw;
+        margin: 0;
+        padding: 0;
+      }
 
       @media screen and (min-width: 1024px) {
         body {
-          height: 100vh;
+          height: 85vh;
         }
         h1, h2, h3 {
           margin: 0;
@@ -82,7 +83,6 @@
 
     const { days } = finish.diff(now, 'days');
     const { days: days2 } = finish2.diff(now, 'days');
-    const {days: daysAutumn2023 } = autumn2023.diff(now, 'days');
     const {days: hasBeen } = now.diff(start, 'days');
     // const { weeks } = finish.diff(now, 'weeks');
     // const { months } = finish.diff(now, 'months');
@@ -93,9 +93,6 @@
 
     // const h2 = document.getElementById('h2');
     // h2.innerHTML = Math.floor(weeks);
-    
-    const h2 = document.getElementById('h2');
-    h2.innerHTML = Math.ceil(daysAutumn2023);
 
     const p1 = document.getElementById('p1');
     p1.innerHTML = Math.ceil(hasBeen);
