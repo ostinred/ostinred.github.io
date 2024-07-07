@@ -14,94 +14,104 @@
         overflow: hidden;
         flex-direction: column;
       }
-      h1 {
-        font-size: 40vw;
-        margin: 25px 0 0 0;
-        line-height: 1;
-      }
-      h2 {
-        font-size: 25vw;
-        margin: 25px 0 0 0;
-        line-height: 1;
-      }
-      h3 {
-        font-size: 15vw;
+
+      h2, p {
+        font-size: clamp(24px, 40vw, 200px); 
         margin: 25px 0 0 0;
         line-height: 1;
       }
 
-      .row {
-        display: flex;
-        align-items: center;
+      p {
+        display: none;
+        padding: 0 2vw;
       }
 
-      .row p {
-        line-height: 1;
-        font-size: 3vw;
-        margin: 0;
-        padding: 0;
+      .progress {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-top: 4vh;
+      }
+
+      #line {
+        height: 100%;
+        width: 50%;
+        background-color: green;
+      }
+
+      #number {
+        font-weight: bold;
+        color: #000;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
 
       @media screen and (min-width: 1024px) {
         body {
           height: 85vh;
         }
-        h1, h2, h3 {
+        h2, p {
+          font-size: clamp(24px, 40vw, 250px); 
           margin: 0;
         }
-        h1 {
-          font-size: 20vw;
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        h2 {
-          font-size: 15vw;
-        }
-        h3 {
-          font-size: 10vw;
+        p {
+          display: inline;
         }
       }
+
     </style>
   </head>
   <body>
     <div class="row">
-      <p id="p1"></p>
-      <h1 id="h1"></h1>
-      <p id="p2"></p>
+      <h2 id="stay"></h2>
+      <p>/</p>
+      <h2 id="remain"></h2>
     </div>
-    <h2 id="h2" />
-    <h3 id="h3" />
+
+    <div class="progress">
+      <div id="line"></div>
+      <div id="number" class="number">50%</div>
+    </div>
+
   </body>
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
   <script>
     var DateTime = luxon.DateTime;
 
-    const start = luxon.DateTime.fromISO('2023-06-17T21:00');
     const now = luxon.DateTime.now();
-    const autumn2023 = luxon.DateTime.fromISO('2023-09-13T00:01');
+    const start = luxon.DateTime.fromISO('2023-06-17T21:00');
+    const finish = luxon.DateTime.fromISO('2025-06-19T00:00');
 
-    const finish = luxon.DateTime.fromISO('2024-06-19T00:00');
-    const finish2 = luxon.DateTime.fromISO('2025-06-19T00:00');
-
-    const { days } = finish.diff(now, 'days');
-    const { days: days2 } = finish2.diff(now, 'days');
+    const { days: needToBe } = finish.diff(now, 'days');
     const {days: hasBeen } = now.diff(start, 'days');
-    // const { weeks } = finish.diff(now, 'weeks');
-    // const { months } = finish.diff(now, 'months');
 
-
-    const h1 = document.getElementById('h1');
-    h1.innerHTML = Math.ceil(days);
-
-    // const h2 = document.getElementById('h2');
-    // h2.innerHTML = Math.floor(weeks);
-
-    const p1 = document.getElementById('p1');
-    p1.innerHTML = Math.ceil(hasBeen);
+    const { days: comitment }  = finish.diff(start, 'days');
+   
+    const currentProgress = hasBeen/(comitment/100);
+   
     
-    const p2 = document.getElementById('p2');
-    p2.innerHTML = Math.ceil(days2);
+console.log('comitment', comitment);
+console.log('hasBeen', hasBeen);
+console.log('currentProgress', currentProgress);
 
+    const stay = document.getElementById('stay');
+    stay.innerHTML = Math.ceil(hasBeen);
 
-    // const h3 = document.getElementById('h3');
-    // h3.innerHTML = Math.floor(months);
+    const remain = document.getElementById('remain');
+    remain.innerHTML = Math.ceil(needToBe);
+
+    const progress = document.getElementById('number');
+    progress.innerHTML = `${currentProgress.toFixed(2)}%`;
+
   </script>
 </html>
