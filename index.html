@@ -21,6 +21,12 @@
         line-height: 1;
       }
 
+      h4 {
+        font-size: clamp(24px, 30vw, 150px); 
+        margin: 25px 0 0 0;
+        line-height: 1;
+      }
+
       p {
         display: none;
         padding: 0 2vw;
@@ -32,7 +38,7 @@
         height: 50px;
         border: 1px solid #eee;
         border-radius: 8px;
-        margin-top: 4vh;
+        margin: 4vh 0;
       }
 
       #line {
@@ -59,6 +65,12 @@
           font-size: clamp(24px, 40vw, 250px); 
           margin: 0;
         }
+
+        h4 {
+          font-size: clamp(20px, 25vw, 150px); 
+          margin: 0;
+        }
+
         .row {
           display: flex;
           align-items: center;
@@ -83,6 +95,11 @@
       <div id="number" class="number">50%</div>
     </div>
 
+    <div class="row">
+      <h4 id="notice"></h4>
+    </div>
+
+
   </body>
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
   <script>
@@ -90,19 +107,17 @@
 
     const now = luxon.DateTime.now();
     const start = luxon.DateTime.fromISO('2023-06-17T21:00');
+    const noticeStarts = luxon.DateTime.fromISO('2025-03-19T09:00');
     const finish = luxon.DateTime.fromISO('2025-06-19T00:00');
 
     const { days: needToBe } = finish.diff(now, 'days');
     const {days: hasBeen } = now.diff(start, 'days');
 
-    const { days: comitment }  = finish.diff(start, 'days');
+    const { days: commitment }  = finish.diff(start, 'days');
+    const { days: beforeNoticePeriod }  = noticeStarts.diff(now, 'days');
    
-    const currentProgress = hasBeen/(comitment/100);
+    const currentProgress = hasBeen/(commitment/100);
    
-    
-console.log('comitment', comitment);
-console.log('hasBeen', hasBeen);
-console.log('currentProgress', currentProgress);
 
     const stay = document.getElementById('stay');
     stay.innerHTML = Math.ceil(hasBeen);
@@ -113,5 +128,7 @@ console.log('currentProgress', currentProgress);
     const progress = document.getElementById('number');
     progress.innerHTML = `${currentProgress.toFixed(2)}%`;
 
+    const notice = document.getElementById('notice');
+    notice.innerHTML = Math.ceil(beforeNoticePeriod);
   </script>
 </html>
