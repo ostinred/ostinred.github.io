@@ -43,7 +43,6 @@
 
       #line {
         height: 100%;
-        width: 50%;
         background-color: green;
       }
 
@@ -91,7 +90,7 @@
     </div>
 
     <div class="progress">
-      <div id="line"></div>
+      <div id="line" style="width: ;"></div>
       <div id="number" class="number">50%</div>
     </div>
 
@@ -130,5 +129,8 @@
 
     const notice = document.getElementById('notice');
     notice.innerHTML = Math.ceil(beforeNoticePeriod);
+
+    const progressLine = document.getElementById('line');
+    line.style.width = `${currentProgress}%`;
   </script>
 </html>
