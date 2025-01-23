@@ -95,7 +95,7 @@
     </div>
 
     <div class="row">
-      <h4 id="notice"></h4>
+      <h4 id="equator"></h4>
     </div>
 
 
@@ -106,17 +106,20 @@
 
     const now = luxon.DateTime.now();
     const start = luxon.DateTime.fromISO('2023-06-17T21:00');
-    const noticeStarts = luxon.DateTime.fromISO('2025-03-19T09:00');
+    const equator = luxon.DateTime.fromISO('2026-01-01T00:00');
     const finish = luxon.DateTime.fromISO('2025-06-19T00:00');
 
     const { days: needToBe } = finish.diff(now, 'days');
     const {days: hasBeen } = now.diff(start, 'days');
 
+
     const { days: commitment }  = finish.diff(start, 'days');
-    const { days: beforeNoticePeriod }  = noticeStarts.diff(now, 'days');
+    const { days: beforeEquator }  = equator.diff(now, 'days');
    
     const currentProgress = hasBeen/(commitment/100);
    
+
+    console.log('beforeEquator', beforeEquator);
 
     const stay = document.getElementById('stay');
     stay.innerHTML = Math.ceil(hasBeen);
@@ -127,8 +130,8 @@
     const progress = document.getElementById('number');
     progress.innerHTML = `${currentProgress.toFixed(2)}%`;
 
-    const notice = document.getElementById('notice');
-    notice.innerHTML = Math.ceil(beforeNoticePeriod);
+    const equatorT = document.getElementById('equator');
+    equatorT.innerHTML = Math.ceil(beforeEquator);
 
     const progressLine = document.getElementById('line');
     line.style.width = `${currentProgress}%`;
