@@ -52,13 +52,22 @@ p {
   transform: translate(-50%,-50%);
 }
 
+#start {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     height: 85vh;
   }
+
   h2, p {
     font-size: clamp(24px, 40vw, 250px); 
     margin: 0;
+  }
+
+  #start {
+    display: block;
   }
 
   h4 {
